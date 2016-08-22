@@ -46,6 +46,18 @@ public class AppController {
     @Autowired
     AuthenticationTrustResolver authenticationTrustResolver;
 
+    /**
+     * This method
+     */
+    @RequestMapping(value = { "/", "/info" }, method = RequestMethod.GET)
+    public String userInfo(ModelMap model) {
+
+        User users = userService.findBySSO(getPrincipal());
+        model.addAttribute("users", users);
+        model.addAttribute("loggedinuser", getPrincipal());
+        return "userInfo";
+    }
+
 
     /**
      * This method will list all existing users.
@@ -182,7 +194,8 @@ public class AppController {
         if (isCurrentAuthenticationAnonymous()) {
             return "login";
         } else {
-            return "redirect:/list";
+//            return "redirect:/list";
+            return "redirect:/info";
         }
     }
 

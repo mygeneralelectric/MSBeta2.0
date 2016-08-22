@@ -3,6 +3,7 @@ package com.tys.ms.model;
 import java.io.Serializable;
 
 public enum UserProfileType implements Serializable {
+    REG_EMP("REG_EMP"),
     USER("USER"),
     DBA("DBA"),
     ADMIN("ADMIN");
