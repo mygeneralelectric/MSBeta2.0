@@ -4,16 +4,8 @@ import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -44,11 +36,16 @@ public class User implements Serializable {
     private String email;
 
     @NotEmpty
-    @ManyToMany(fetch = FetchType.LAZY)
+    @Column(name="UPBOSSID")
+    private String upBossId;
+
+//    @NotEmpty
+    @NotNull
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinTable(name = "APP_USER_USER_PROFILE",
             joinColumns = { @JoinColumn(name = "USER_ID") },
             inverseJoinColumns = { @JoinColumn(name = "USER_PROFILE_ID") })
-    private Set<UserProfile> userProfiles = new HashSet<UserProfile>();
+    private UserProfile userProfile = null;
 
     public Integer getId() {
         return id;
@@ -98,12 +95,20 @@ public class User implements Serializable {
         this.email = email;
     }
 
-    public Set<UserProfile> getUserProfiles() {
-        return userProfiles;
+    public UserProfile getUserProfiles() {
+        return userProfile;
     }
 
-    public void setUserProfiles(Set<UserProfile> userProfiles) {
-        this.userProfiles = userProfiles;
+    public void setUserProfiles(UserProfile userProfile) {
+        this.userProfile = userProfile;
+    }
+
+    public String getUpBossId() {
+        return upBossId;
+    }
+
+    public void setUpBossId(String upBossId) {
+        this.upBossId = upBossId;
     }
 
     @Override

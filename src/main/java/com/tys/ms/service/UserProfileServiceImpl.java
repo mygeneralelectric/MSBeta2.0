@@ -26,4 +26,9 @@ public class UserProfileServiceImpl implements UserProfileService{
 	public List<UserProfile> findAll() {
 		return dao.findAll();
 	}
+
+	@Override
+	public List<UserProfile> findDownAll(int upId) {
+		return dao.findDown(upId);
+	}
 }

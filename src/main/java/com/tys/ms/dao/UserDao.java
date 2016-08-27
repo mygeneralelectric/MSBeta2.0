@@ -14,5 +14,9 @@ public interface UserDao {
 	void deleteBySSO(String sso);
 	
 	List<User> findAllUsers();
+
+	List<User> findDownUsers(String upBossId);
+
+	List<User> findTwiceDownUsers(String upBossId);
 }
 

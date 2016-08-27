@@ -3,6 +3,8 @@ package com.tys.ms.dao;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.StringTokenizer;
+
 import com.tys.ms.model.User;
 import org.hibernate.Criteria;
 import org.hibernate.Hibernate;
@@ -39,6 +41,38 @@ public class UserDaoImpl extends AbstractDao<Integer, User> implements UserDao {
         Criteria criteria = createEntityCriteria().addOrder(Order.asc("firstName"));
         criteria.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY);//To avoid duplicates.
         List<User> users = (List<User>) criteria.list();
+
+        // No need to fetch userProfiles since we are not showing them on list page. Let them lazy load.
+        // Uncomment below lines for eagerly fetching of userProfiles if you want.
+		/*
+		for(User user : users){
+			Hibernate.initialize(user.getUserProfiles());
+		}*/
+        return users;
+    }
+
+    public List<User> findTwiceDownUsers(String upBossId) {
+        List<User> targetUsers = null;
+        List<User> users1 = findDownUsers(upBossId);
+        targetUsers = users1;
+        List<User> users2 = null;
+        for (User user1 : users1) {
+            users2 = findDownUsers(user1.getSsoId());
+        }
+        for (User user2 : users2) {
+            targetUsers.add(user2);
+            System.out.println(user2.getSsoId());
+            System.out.println(targetUsers.size());
+        }
+        return targetUsers;
+    }
+
+    public List<User> findDownUsers(String upBossId) {
+        logger.info("upBossId : {}", upBossId);
+        Criteria crit = createEntityCriteria();
+        List<User> users  = crit.add(Restrictions.eq("upBossId", upBossId))
+                .setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY)
+                .list();
 
         // No need to fetch userProfiles since we are not showing them on list page. Let them lazy load.
         // Uncomment below lines for eagerly fetching of userProfiles if you want.

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import com.tys.ms.model.UserProfile;
 import java.util.List;
 import java.util.Locale;
+import java.util.Set;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import com.tys.ms.model.User;
@@ -64,7 +65,18 @@ public class AppController {
      */
     @RequestMapping(value = { "/", "/list" }, method = RequestMethod.GET)
     public String listUsers(ModelMap model) {
+//        List<User> users = userService.findDownUsers(getPrincipal());
+        List<User> users = userService.findTwiceDownUsers(getPrincipal());
+        model.addAttribute("users", users);
+        model.addAttribute("loggedinuser", getPrincipal());
+        return "userslist";
+    }
 
+    /**
+     * This method will list all existing users.
+     */
+    @RequestMapping(value = { "/", "/all-list" }, method = RequestMethod.GET)
+    public String listAllUsers(ModelMap model) {
         List<User> users = userService.findAllUsers();
         model.addAttribute("users", users);
         model.addAttribute("loggedinuser", getPrincipal());
@@ -77,8 +89,11 @@ public class AppController {
     @RequestMapping(value = { "/newuser" }, method = RequestMethod.GET)
     public String newUser(ModelMap model) {
         User user = new User();
+        int upId = userService.findBySSO(getPrincipal()).getUserProfiles().getId();
+        List<UserProfile> userProfileList = userProfileService.findDownAll(upId);
         model.addAttribute("user", user);
         model.addAttribute("edit", false);
+        model.addAttribute("profile", userProfileList);
         model.addAttribute("loggedinuser", getPrincipal());
         return "registration";
     }
@@ -88,10 +103,11 @@ public class AppController {
      * saving user in database. It also validates the user input
      */
     @RequestMapping(value = { "/newuser" }, method = RequestMethod.POST)
-    public String saveUser(@Valid User user, BindingResult result,
-                           ModelMap model) {
-
+    public String saveUser(@Valid User user, BindingResult result, ModelMap model) {
         if (result.hasErrors()) {
+            int upId = userService.findBySSO(getPrincipal()).getUserProfiles().getId();
+            List<UserProfile> userProfileList = userProfileService.findDownAll(upId);
+            model.addAttribute("profile", userProfileList);
             return "registration";
         }
 
@@ -174,7 +190,17 @@ public class AppController {
     @ModelAttribute("roles")
     public List<UserProfile> initializeProfiles() {
         return userProfileService.findAll();
+//        List<UserProfile> userProfileList = userProfileService.findAll();
+//        System.out.println(userProfileList.size());
+//        return userProfileList;
     }
+
+//    @ModelAttribute("profile")
+//    public List<UserProfile> downProfiles() {
+//        int upId = userService.findBySSO(getPrincipal()).getUserProfiles().getId();
+//        List<UserProfile> userProfileList = userProfileService.findDownAll(upId);
+//        return userProfileList;
+//    }
 
     /**
      * This method handles Access-Denied redirect.

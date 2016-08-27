@@ -6,6 +6,8 @@ import com.tys.ms.model.UserProfile;
 public interface UserProfileDao {
 
 	List<UserProfile> findAll();
+
+	List<UserProfile> findDown(int upId);
 	
 	UserProfile findByType(String type);
 	

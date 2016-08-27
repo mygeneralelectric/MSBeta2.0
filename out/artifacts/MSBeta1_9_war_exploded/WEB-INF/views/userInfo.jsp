@@ -22,12 +22,12 @@
                     <th>Lastname</th>
                     <th>Email</th>
                     <th>SSO ID</th>
-                    <sec:authorize access="hasRole('ADMIN') or hasRole('DBA')">
-                        <th width="100"></th>
-                    </sec:authorize>
-                    <sec:authorize access="hasRole('ADMIN')">
-                        <th width="100"></th>
-                    </sec:authorize>
+                    <%--<sec:authorize access="hasRole('ADMIN') or hasRole('AERA') or hasRole('GROUP') or hasRole('REGULAR')">--%>
+                        <%--<th width="100"></th>--%>
+                    <%--</sec:authorize>--%>
+                    <%--<sec:authorize access="hasRole('ADMIN') or hasRole('AERA') or hasRole('GROUP') or hasRole('REGULAR')">--%>
+                        <%--<th width="100"></th>--%>
+                    <%--</sec:authorize>--%>
 
                 </tr>
                 </thead>
@@ -38,8 +38,11 @@
                         <td>${users.lastName}</td>
                         <td>${users.email}</td>
                         <td>${users.ssoId}</td>
-                        <sec:authorize access="hasRole('ADMIN') or hasRole('DBA')">
-                            <td><a href="<c:url value='/edit-user-${user.ssoId}' />" class="btn btn-success custom-width">edit</a></td>
+                        <%--<sec:authorize access="hasRole('ADMIN') or hasRole('AERA') or hasRole('GROUP') or hasRole('REGULAR')">--%>
+                            <%--<td><a href="<c:url value='/edit-user-${users.ssoId}' />" class="btn btn-success custom-width">edit</a></td>--%>
+                            <%--</sec:authorize>--%>
+                        <sec:authorize access="hasRole('ADMIN') or hasRole('AREA') or hasRole('GROUP')">
+                            <td><a href="<c:url value='/edit-user-${users.ssoId}' />" class="btn btn-success custom-width">edit</a></td>
                         </sec:authorize>
                         <%--<sec:authorize access="hasRole('ADMIN')">--%>
                             <%--<td><a href="<c:url value='/delete-user-${user.ssoId}' />" class="btn btn-danger custom-width">delete</a></td>--%>
@@ -49,15 +52,20 @@
                 </tbody>
             </table>
         </div>
-        <sec:authorize access="hasRole('ADMIN')">
+
+        <sec:authorize access="hasRole('AREA') or hasRole('GROUP')">
             <div class="well">
-                <a href="<c:url value='/newuser' />">Add New User</a>
+                <a href="<c:url value='/list' />">UserList</a>
             </div>
         </sec:authorize>
 
-        <div class="well">
-            <a href="<c:url value='/list' />">UserList</a>
-        </div>
+        <sec:authorize access="hasRole('ADMIN')">
+            <div class="well">
+                <a href="<c:url value='/all-list' />">UserList</a>
+            </div>
+        </sec:authorize>
+
+
     </div>
 </body>
 </html>

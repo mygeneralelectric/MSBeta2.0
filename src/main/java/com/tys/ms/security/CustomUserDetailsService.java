@@ -1,6 +1,7 @@
 package com.tys.ms.security;
 
 
+import com.tys.ms.service.UserProfileServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -25,6 +26,8 @@ public class CustomUserDetailsService implements UserDetailsService {
     @Autowired
     private UserService userService;
 
+    private UserProfileServiceImpl userProfileServiceImpl;
+
     @Transactional(readOnly = true)
     @Override
     public UserDetails loadUserByUsername(String ssoId) throws UsernameNotFoundException {
@@ -41,10 +44,12 @@ public class CustomUserDetailsService implements UserDetailsService {
     private List<GrantedAuthority> getGrantedAuthorities(User user){
         List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
 
-        for(UserProfile userProfile : user.getUserProfiles()){
-            logger.info("UserProfile : {}", userProfile);
-            authorities.add(new SimpleGrantedAuthority("ROLE_"+userProfile.getType()));
-        }
+        logger.info("UserProfile : {}", user.getUserProfiles());
+        authorities.add(new SimpleGrantedAuthority("ROLE_"+user.getUserProfiles().getType()));
+//        for(UserProfile userProfile : user.getUserProfiles() ){
+//            logger.info("UserProfile : {}", userProfile);
+//            authorities.add(new SimpleGrantedAuthority("ROLE_"+userProfile.getType()));
+//        }
         logger.info("authorities : {}", authorities);
         return authorities;
     }

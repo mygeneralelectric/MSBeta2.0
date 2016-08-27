@@ -17,7 +17,11 @@ public interface UserService {
 	
 	void deleteUserBySSO(String sso);
 
-	List<User> findAllUsers(); 
+	List<User> findAllUsers();
+
+    List<User> findDownUsers(String upBossId);
+
+	List<User> findTwiceDownUsers(String upBossId);
 	
 	boolean isUserSSOUnique(Integer id, String sso);
 

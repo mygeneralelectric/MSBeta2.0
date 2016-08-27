@@ -61,6 +61,14 @@ public class UserServiceImpl implements UserService{
 		return dao.findAllUsers();
 	}
 
+	public List<User> findDownUsers(String upBossId) {
+		return dao.findDownUsers(upBossId);
+	}
+
+	public List<User> findTwiceDownUsers(String upBossId) {
+		return dao.findTwiceDownUsers(upBossId);
+	}
+
 	public boolean isUserSSOUnique(Integer id, String sso) {
 		User user = findBySSO(sso);
 		return ( user == null || ((id != null) && (user.getId() == id)));
