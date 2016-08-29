@@ -3,11 +3,7 @@ package com.tys.ms.controller;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.annotation.*;
 
 import com.tys.ms.model.UserProfile;
 import java.util.List;
@@ -231,14 +227,14 @@ public class AppController {
      * updating user in database. It also validates the user input
      */
     @RequestMapping(value = { "/change-passwd-{ssoId}" }, method = RequestMethod.POST)
-    public String changePasswd(@Valid User user, BindingResult result, ModelMap model, @PathVariable String ssoId) {
-        if (result.hasErrors()) {
-            model.addAttribute("edit", true);
-            int upId = userService.findBySSO(ssoId).getUserProfiles().getId();
-            List<UserProfile> userProfileList = userProfileService.findDownAll(upId);
-            model.addAttribute("profile", userProfileList);
-            return "registration";
-        }
+    public String changePasswd(@RequestParam("newPassword") String newpassword, ModelMap model, @PathVariable String ssoId) {
+//        if (result.hasErrors()) {
+//            model.addAttribute("edit", true);
+//            int upId = userService.findBySSO(ssoId).getUserProfiles().getId();
+//            List<UserProfile> userProfileList = userProfileService.findDownAll(upId);
+//            model.addAttribute("profile", userProfileList);
+//            return "registration";
+//        }
 
 		/*//Uncomment below 'if block' if you WANT TO ALLOW UPDATING SSO_ID in UI which is a unique key to a User.
 		if(!userService.isUserSSOUnique(user.getId(), user.getSsoId())){
@@ -246,6 +242,9 @@ public class AppController {
 		    result.addError(ssoError);
 			return "registration";
 		}*/
+
+		User user = userService.findBySSO(ssoId);
+        user.setPassword(newpassword);
 
         userService.updateUser(user);
 
