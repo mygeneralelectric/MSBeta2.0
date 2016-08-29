@@ -21,14 +21,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/application.properties" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/application.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/views/userInfo.jsp" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/views/userInfo.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tys/ms/configuration/AppConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/tys/ms/configuration/AppConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tys/ms/controller/AppController.java" afterPath="$PROJECT_DIR$/src/main/java/com/tys/ms/controller/AppController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tys/ms/security/SecurityConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/com/tys/ms/security/SecurityConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/userInfo.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/userInfo.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/WEB-INF/views/changPasswd.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/cp.jsp" />
     </list>
     <ignored path="MSBeta1.9.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1252,7 +1245,7 @@
       <workItem from="1472269897946" duration="6249000" />
       <workItem from="1472284623752" duration="3070000" />
       <workItem from="1472450431688" duration="8218000" />
-      <workItem from="1472483301419" duration="5250000" />
+      <workItem from="1472483301419" duration="5326000" />
     </task>
     <task id="LOCAL-00001" summary="2016-08-27">
       <created>1472290484952</created>
@@ -1275,11 +1268,18 @@
       <option name="project" value="LOCAL" />
       <updated>1472462785974</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="2016-08-30 am1">
+      <created>1472490059011</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1472490059011</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133112000" />
+    <option name="totallyTimeSpent" value="133188000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1341,7 +1341,8 @@
     <MESSAGE value="2016-08-27" />
     <MESSAGE value="2016-08-29 pm" />
     <MESSAGE value="2016-08-29 pm2" />
-    <option name="LAST_COMMIT_MESSAGE" value="2016-08-29 pm2" />
+    <MESSAGE value="2016-08-30 am1" />
+    <option name="LAST_COMMIT_MESSAGE" value="2016-08-30 am1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
