@@ -1,173 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6cc4fa85-0f50-47e8-b37d-33ebd631ef6c" name="Default" comment="2016-08-27">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/fonts/MaterialIcons/MaterialIcons-Regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/fonts/MaterialIcons/MaterialIcons-Regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/fonts/MaterialIcons/MaterialIcons-Regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/fonts/MaterialIcons/MaterialIcons-Regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/fonts/roboto/Roboto-Bold.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/fonts/roboto/Roboto-Bold.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/fonts/roboto/Roboto-Bold.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/fonts/roboto/Roboto-Bold.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/fonts/roboto/Roboto-Light.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/fonts/roboto/Roboto-Light.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/fonts/roboto/Roboto-Light.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/fonts/roboto/Roboto-Light.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/fonts/roboto/Roboto-Medium.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/fonts/roboto/Roboto-Medium.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/fonts/roboto/Roboto-Medium.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/fonts/roboto/Roboto-Medium.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/fonts/roboto/Roboto-Regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/fonts/roboto/Roboto-Regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/fonts/roboto/Roboto-Regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/fonts/roboto/Roboto-Regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/fonts/roboto/Roboto-Thin.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/fonts/roboto/Roboto-Thin.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/fonts/roboto/Roboto-Thin.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/fonts/roboto/Roboto-Thin.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/car/pro_car_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/car/pro_car_10.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/car/pro_car_11.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/car/pro_car_12.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/car/pro_car_13.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/car/pro_car_14.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/car/pro_car_15.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/car/pro_car_16.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/car/pro_car_17.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/car/pro_car_18.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/car/pro_car_19.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/car/pro_car_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/car/pro_car_20.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/car/pro_car_21.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/car/pro_car_22.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/car/pro_car_23.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/car/pro_car_24.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/car/pro_car_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/car/pro_car_4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/car/pro_car_5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/car/pro_car_6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/car/pro_car_7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/car/pro_car_8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/car/pro_car_9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/index/cooperate.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/index/desk-full.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/index/nav-bag.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/index/office.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/index/qrcode.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/index/sea.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/life/life1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/life/life1.psd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/life/life2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/life/life2.psd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/life/pro_life_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/life/pro_life_2-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/life/pro_life_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/life/pro_life_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/life/pro_life_4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/life/pro_life_5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/life/pro_life_6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/life/pro_life_7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/life/pro_life_8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/life/res0804-11.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/life/res0804-12.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/life/res0804-13.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/life/res0804-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/life/res0804-6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/life/res0804-7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/life/res0804-8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/property/pro_per_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/property/pro_per_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/property/pro_per_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/property/pro_per_4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/property/pro_per_5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/views/changPasswd.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/css/material-icons.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/css/materialize.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/fonts/MaterialIcons/MaterialIcons-Regular.ijmap" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/fonts/MaterialIcons/MaterialIcons-Regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/fonts/MaterialIcons/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/fonts/MaterialIcons/codepoints" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/js/init.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/js/jquery-2.1.1.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/js/materialize.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/js/materialize.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/page/car.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/page/car2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/page/car3.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/page/life.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/page/life2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/page/life3.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/page/life4.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/page/life5.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/page/property.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/page/property2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/page/property3.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/controller/AppController.class" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/controller/AppController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/dao/HibernateTokenRepositoryImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/dao/HibernateTokenRepositoryImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/dao/UserDao.class" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/dao/UserDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/dao/UserDaoImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/dao/UserDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/dao/UserProfileDao.class" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/dao/UserProfileDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/dao/UserProfileDaoImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/dao/UserProfileDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/model/User.class" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/model/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/model/UserProfile.class" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/model/UserProfile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/model/UserProfileType.class" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/model/UserProfileType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/security/CustomUserDetailsService.class" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/security/CustomUserDetailsService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/security/SecurityConfiguration.class" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/security/SecurityConfiguration.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/service/UserProfileService.class" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/service/UserProfileService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/service/UserProfileServiceImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/service/UserProfileServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/service/UserService.class" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/service/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/service/UserServiceImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/service/UserServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tys/ms/controller/AppController.class" afterPath="$PROJECT_DIR$/target/classes/com/tys/ms/controller/AppController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tys/ms/dao/HibernateTokenRepositoryImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/tys/ms/dao/HibernateTokenRepositoryImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tys/ms/dao/UserDao.class" afterPath="$PROJECT_DIR$/target/classes/com/tys/ms/dao/UserDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tys/ms/dao/UserDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/tys/ms/dao/UserDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tys/ms/dao/UserProfileDao.class" afterPath="$PROJECT_DIR$/target/classes/com/tys/ms/dao/UserProfileDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tys/ms/dao/UserProfileDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/tys/ms/dao/UserProfileDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tys/ms/model/User.class" afterPath="$PROJECT_DIR$/target/classes/com/tys/ms/model/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tys/ms/model/UserProfile.class" afterPath="$PROJECT_DIR$/target/classes/com/tys/ms/model/UserProfile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tys/ms/model/UserProfileType.class" afterPath="$PROJECT_DIR$/target/classes/com/tys/ms/model/UserProfileType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tys/ms/security/CustomUserDetailsService.class" afterPath="$PROJECT_DIR$/target/classes/com/tys/ms/security/CustomUserDetailsService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tys/ms/security/SecurityConfiguration.class" afterPath="$PROJECT_DIR$/target/classes/com/tys/ms/security/SecurityConfiguration.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tys/ms/service/UserProfileService.class" afterPath="$PROJECT_DIR$/target/classes/com/tys/ms/service/UserProfileService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tys/ms/service/UserProfileServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/tys/ms/service/UserProfileServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tys/ms/service/UserService.class" afterPath="$PROJECT_DIR$/target/classes/com/tys/ms/service/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tys/ms/service/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/tys/ms/service/UserServiceImpl.class" />
+    <list default="true" id="6cc4fa85-0f50-47e8-b37d-33ebd631ef6c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/application.properties" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/messages.properties" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/messages.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/views/registration.jsp" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/views/registration.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/views/registrationsuccess.jsp" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/views/registrationsuccess.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/views/userInfo.jsp" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/views/userInfo.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/views/userslist.jsp" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/views/userslist.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/static/css/app.css" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/static/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/static/css/bootstrap.css" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/static/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tys/ms/controller/AppController.java" afterPath="$PROJECT_DIR$/src/main/java/com/tys/ms/controller/AppController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tys/ms/dao/UserDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/tys/ms/dao/UserDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tys/ms/dao/UserDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/tys/ms/dao/UserDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tys/ms/dao/UserProfileDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/tys/ms/dao/UserProfileDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tys/ms/dao/UserProfileDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/tys/ms/dao/UserProfileDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tys/ms/model/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/tys/ms/model/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tys/ms/model/UserProfile.java" afterPath="$PROJECT_DIR$/src/main/java/com/tys/ms/model/UserProfile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tys/ms/model/UserProfileType.java" afterPath="$PROJECT_DIR$/src/main/java/com/tys/ms/model/UserProfileType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tys/ms/security/CustomUserDetailsService.java" afterPath="$PROJECT_DIR$/src/main/java/com/tys/ms/security/CustomUserDetailsService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tys/ms/security/SecurityConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/com/tys/ms/security/SecurityConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tys/ms/service/UserProfileService.java" afterPath="$PROJECT_DIR$/src/main/java/com/tys/ms/service/UserProfileService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tys/ms/service/UserProfileServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/tys/ms/service/UserProfileServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tys/ms/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/tys/ms/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tys/ms/service/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/tys/ms/service/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/messages.properties" afterPath="$PROJECT_DIR$/src/main/resources/messages.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/messages.properties" afterPath="$PROJECT_DIR$/target/classes/messages.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/registration.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/registration.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/registrationsuccess.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/registrationsuccess.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/userInfo.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/userInfo.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/userslist.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/userslist.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
     </list>
     <ignored path="MSBeta1.9.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -193,7 +28,7 @@
       <file leaf-file-name="changPasswd.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/changPasswd.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="545">
+            <state relative-caret-position="986">
               <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding />
             </state>
@@ -203,7 +38,7 @@
       <file leaf-file-name="userInfo.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/userInfo.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
+            <state relative-caret-position="1624">
               <caret line="56" column="72" selection-start-line="56" selection-start-column="72" selection-end-line="56" selection-end-column="72" />
               <folding />
             </state>
@@ -213,7 +48,7 @@
       <file leaf-file-name="CustomUserDetailsService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tys/ms/security/CustomUserDetailsService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
+            <state relative-caret-position="899">
               <caret line="47" column="94" selection-start-line="47" selection-start-column="94" selection-end-line="47" selection-end-column="94" />
               <folding />
             </state>
@@ -351,9 +186,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -744,6 +576,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1290,12 +1125,21 @@
       <workItem from="1472180625554" duration="3055000" />
       <workItem from="1472260058601" duration="8871000" />
       <workItem from="1472269897946" duration="6249000" />
-      <workItem from="1472284623752" duration="3023000" />
+      <workItem from="1472284623752" duration="3070000" />
+      <workItem from="1472450431688" duration="22000" />
     </task>
+    <task id="LOCAL-00001" summary="2016-08-27">
+      <created>1472290484952</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1472290484952</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119597000" />
+    <option name="totallyTimeSpent" value="119666000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1312,14 +1156,12 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32824427" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32824427" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3729553" sideWeight="0.5106838" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3293348" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24645583" sideWeight="0.48931623" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1327,19 +1169,21 @@
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.099236645" sideWeight="0.4946581" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.258547" sideWeight="0.3400936" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.258547" sideWeight="0.37636763" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4514722" sideWeight="0.49786323" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24626069" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4514722" sideWeight="0.49786323" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32824427" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24645583" sideWeight="0.48931623" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.099236645" sideWeight="0.4946581" order="0" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1552,10 +1396,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="402">
           <caret line="60" column="24" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
-          <folding>
-            <element signature="e#1623#1624#0" expanded="false" />
-            <element signature="e#1655#1656#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1571,7 +1411,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
           <caret line="4" column="27" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1601,7 +1440,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="580">
           <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1617,7 +1455,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
           <caret line="6" column="24" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1625,7 +1462,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
           <caret line="5" column="35" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1633,10 +1469,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
           <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
-          <folding>
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#761#762#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1644,7 +1476,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
           <caret line="5" column="31" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1690,7 +1521,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="7" column="64" selection-start-line="7" selection-start-column="64" selection-end-line="7" selection-end-column="64" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1724,7 +1554,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="87">
           <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1732,7 +1561,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1450">
           <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1740,7 +1568,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2929">
           <caret line="145" column="0" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1748,7 +1575,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="12383">
           <caret line="491" column="0" selection-start-line="491" selection-start-column="0" selection-end-line="491" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1778,7 +1604,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/changPasswd.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
+        <state relative-caret-position="986">
           <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
         </state>
@@ -1786,7 +1612,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/userInfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
+        <state relative-caret-position="1624">
           <caret line="56" column="72" selection-start-line="56" selection-start-column="72" selection-end-line="56" selection-end-column="72" />
           <folding />
         </state>
@@ -1794,7 +1620,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tys/ms/security/CustomUserDetailsService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
+        <state relative-caret-position="899">
           <caret line="47" column="94" selection-start-line="47" selection-start-column="94" selection-end-line="47" selection-end-column="94" />
           <folding />
         </state>
