@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6cc4fa85-0f50-47e8-b37d-33ebd631ef6c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/controller/AppController.class" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/controller/AppController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tys/ms/controller/AppController.class" afterPath="$PROJECT_DIR$/target/classes/com/tys/ms/controller/AppController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/views/registration.jsp" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/views/registration.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/views/userInfo.jsp" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/views/userInfo.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tys/ms/controller/AppController.java" afterPath="$PROJECT_DIR$/src/main/java/com/tys/ms/controller/AppController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tys/ms/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/tys/ms/service/UserService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tys/ms/service/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/tys/ms/service/UserServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/registration.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/registration.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/userInfo.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/userInfo.jsp" />
     </list>
     <ignored path="MSBeta1.9.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,21 +34,60 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="changPasswd.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/changPasswd.jsp">
+      <file leaf-file-name="AppController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tys/ms/controller/AppController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="986">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state relative-caret-position="399">
+              <caret line="235" column="45" selection-start-line="235" selection-start-column="45" selection-end-line="235" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#11028#11029#0" expanded="true" />
+                <element signature="e#11079#11080#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tys/ms/service/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="17" column="33" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userInfo.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/userInfo.jsp">
+      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tys/ms/service/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1624">
-              <caret line="56" column="72" selection-start-line="56" selection-start-column="72" selection-end-line="56" selection-end-column="72" />
+            <state relative-caret-position="605">
+              <caret line="55" column="25" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
+              <folding>
+                <element signature="e#1553#1554#0" expanded="true" />
+                <element signature="e#1585#1586#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SecurityConfiguration.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tys/ms/security/SecurityConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-672">
+              <caret line="42" column="143" selection-start-line="42" selection-start-column="143" selection-end-line="42" selection-end-column="143" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SecurityWebApplicationInitializer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tys/ms/security/SecurityWebApplicationInitializer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="116">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -48,23 +96,19 @@
       <file leaf-file-name="CustomUserDetailsService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tys/ms/security/CustomUserDetailsService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="899">
+            <state relative-caret-position="9">
               <caret line="47" column="94" selection-start-line="47" selection-start-column="94" selection-end-line="47" selection-end-column="94" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="materialize.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/static/js/materialize.js">
+      <file leaf-file-name="registration.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/registration.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="6576" column="34" selection-start-line="6576" selection-start-column="34" selection-end-line="6576" selection-end-column="34" />
-              <folding>
-                <marker date="1459543680000" expanded="true" signature="152844:152851" ph="&amp;##9660;" />
-                <marker date="1459543680000" expanded="true" signature="212073:212102" ph="..." />
-                <marker date="1459543680000" expanded="true" signature="212363:212373" ph="..." />
-              </folding>
+            <state relative-caret-position="394">
+              <caret line="103" column="35" selection-start-line="103" selection-start-column="35" selection-end-line="103" selection-end-column="35" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -110,25 +154,25 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/views/registrationsuccess.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/tys/ms/security/SecurityConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tys/ms/service/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tys/ms/dao/UserDao.java" />
         <option value="$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.2.5.RELEASE/spring-aop-4.2.5.RELEASE.jar!/org/springframework/aop/support/AopUtils.class" />
         <option value="$PROJECT_DIR$/src/main/java/com/tys/ms/dao/UserDaoImpl.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/userslist.jsp" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/tys/ms/security/CustomUserDetailsService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tys/ms/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tys/ms/dao/UserProfileDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tys/ms/service/UserProfileService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tys/ms/service/UserProfileServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tys/ms/dao/UserProfileDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/messages.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/tys/ms/model/User.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/registration.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tys/ms/controller/AppController.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/chang-passwd.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/changPasswd.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/userInfo.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/views/registration.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tys/ms/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tys/ms/service/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tys/ms/controller/AppController.java" />
       </list>
     </option>
   </component>
@@ -590,7 +634,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../11/MSBeta1.9/MSBeta1.9" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../14/MSBeta2.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -1126,7 +1170,7 @@
       <workItem from="1472260058601" duration="8871000" />
       <workItem from="1472269897946" duration="6249000" />
       <workItem from="1472284623752" duration="3070000" />
-      <workItem from="1472450431688" duration="22000" />
+      <workItem from="1472450431688" duration="7872000" />
     </task>
     <task id="LOCAL-00001" summary="2016-08-27">
       <created>1472290484952</created>
@@ -1135,11 +1179,18 @@
       <option name="project" value="LOCAL" />
       <updated>1472290484952</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="2016-08-29 pm">
+      <created>1472450483306</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1472450483306</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119666000" />
+    <option name="totallyTimeSpent" value="127516000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1156,16 +1207,19 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32824427" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32824427" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3729553" sideWeight="0.5106838" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3293348" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18102509" sideWeight="0.48931623" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.258547" sideWeight="0.6236324" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18002136" sideWeight="0.6236324" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24626069" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1173,16 +1227,13 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.258547" sideWeight="0.37636763" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4514722" sideWeight="0.49786323" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24626069" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4514722" sideWeight="0.49786323" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32824427" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24645583" sideWeight="0.48931623" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.099236645" sideWeight="0.4946581" order="0" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1199,42 +1250,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2016-08-27" />
-    <option name="LAST_COMMIT_MESSAGE" value="2016-08-27" />
+    <MESSAGE value="2016-08-29 pm" />
+    <option name="LAST_COMMIT_MESSAGE" value="2016-08-29 pm" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/web/WEB-INF/views/registration.jsp</url>
-          <line>119</line>
-          <properties />
-          <option name="timeStamp" value="77" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/web/WEB-INF/views/registration.jsp</url>
-          <line>121</line>
-          <properties />
-          <option name="timeStamp" value="78" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tys/ms/controller/AppController.java</url>
-          <line>110</line>
-          <properties />
-          <option name="timeStamp" value="79" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tys/ms/controller/AppController.java</url>
-          <line>92</line>
-          <properties />
-          <option name="timeStamp" value="80" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tys/ms/controller/AppController.java</url>
-          <line>95</line>
-          <properties />
-          <option name="timeStamp" value="81" />
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
@@ -1247,13 +1267,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/4.0.4.RELEASE/spring-security-web-4.0.4.RELEASE.jar!/org/springframework/security/web/access/ExceptionTranslationFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/4.0.4.RELEASE/spring-security-web-4.0.4.RELEASE.jar!/org/springframework/security/web/context/SecurityContextPersistenceFilter.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1346,14 +1359,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/userslist.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1566">
-          <caret line="54" column="88" selection-start-line="54" selection-start-column="88" selection-end-line="54" selection-end-column="88" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3538">
@@ -1392,21 +1397,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tys/ms/service/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="60" column="24" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tys/ms/security/SecurityConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="713">
-          <caret line="42" column="143" selection-start-line="42" selection-start-column="143" selection-end-line="42" selection-end-column="143" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tys/ms/model/UserProfileType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
@@ -1436,13 +1426,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tys/ms/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/static/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1455,6 +1438,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
           <caret line="6" column="24" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1462,6 +1446,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
           <caret line="5" column="35" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1469,6 +1454,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
           <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+          <folding>
+            <element signature="e#729#730#0" expanded="false" />
+            <element signature="e#761#762#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1476,6 +1465,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
           <caret line="5" column="31" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1484,7 +1474,7 @@
         <state relative-caret-position="377">
           <caret line="24" column="5" selection-start-line="19" selection-start-column="4" selection-end-line="24" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1502,9 +1492,9 @@
         <state relative-caret-position="899">
           <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2189#2190#0" expanded="true" />
-            <element signature="e#2254#2255#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2189#2190#0" expanded="false" />
+            <element signature="e#2254#2255#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1544,16 +1534,9 @@
         <state relative-caret-position="290">
           <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding>
-            <element signature="e#1240#1241#0" expanded="true" />
-            <element signature="e#1265#1266#0" expanded="true" />
+            <element signature="e#1240#1241#0" expanded="false" />
+            <element signature="e#1265#1266#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -1586,22 +1569,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/registration.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="4" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tys/ms/controller/AppController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3422">
-          <caret line="144" column="59" selection-start-line="144" selection-start-column="59" selection-end-line="144" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/changPasswd.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="986">
@@ -1610,30 +1577,103 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/static/js/materialize.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="6569" column="16" selection-start-line="6569" selection-start-column="16" selection-end-line="6569" selection-end-column="16" />
+          <folding>
+            <marker date="1459543680000" expanded="true" signature="152844:152851" ph="&amp;##9660;" />
+            <marker date="1459543680000" expanded="true" signature="212073:212102" ph="..." />
+            <marker date="1459543680000" expanded="true" signature="212363:212373" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/userInfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1624">
-          <caret line="56" column="72" selection-start-line="56" selection-start-column="72" selection-end-line="56" selection-end-column="72" />
+        <state relative-caret-position="381">
+          <caret line="59" column="68" selection-start-line="59" selection-start-column="68" selection-end-line="59" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/userslist.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="656">
+          <caret line="54" column="88" selection-start-line="54" selection-start-column="88" selection-end-line="54" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/registration.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="103" column="35" selection-start-line="103" selection-start-column="35" selection-end-line="103" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tys/ms/security/CustomUserDetailsService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="899">
+        <state relative-caret-position="9">
           <caret line="47" column="94" selection-start-line="47" selection-start-column="94" selection-end-line="47" selection-end-column="94" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/static/js/materialize.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tys/ms/security/SecurityConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="6576" column="34" selection-start-line="6576" selection-start-column="34" selection-end-line="6576" selection-end-column="34" />
+        <state relative-caret-position="-672">
+          <caret line="42" column="143" selection-start-line="42" selection-start-column="143" selection-end-line="42" selection-end-column="143" />
           <folding>
-            <marker date="1459543680000" expanded="true" signature="152844:152851" ph="&amp;##9660;" />
-            <marker date="1459543680000" expanded="true" signature="212073:212102" ph="..." />
-            <marker date="1459543680000" expanded="true" signature="212363:212373" ph="..." />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tys/ms/security/SecurityWebApplicationInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tys/ms/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tys/ms/service/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="605">
+          <caret line="55" column="25" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
+          <folding>
+            <element signature="e#1553#1554#0" expanded="true" />
+            <element signature="e#1585#1586#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tys/ms/controller/AppController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="235" column="45" selection-start-line="235" selection-start-column="45" selection-end-line="235" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#11028#11029#0" expanded="true" />
+            <element signature="e#11079#11080#0" expanded="true" />
           </folding>
         </state>
       </provider>

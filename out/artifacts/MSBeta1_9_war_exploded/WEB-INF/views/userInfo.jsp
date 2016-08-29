@@ -53,6 +53,10 @@
             </table>
         </div>
 
+        <%--<div class="well">--%>
+            <%--<a href="<c:url value='/change-passwd' />">change-passwd</a>--%>
+        <%--</div>--%>
+
         <sec:authorize access="hasRole('AREA') or hasRole('GROUP')">
             <div class="well">
                 <a href="<c:url value='/list' />">UserList</a>

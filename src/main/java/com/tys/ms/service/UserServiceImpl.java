@@ -52,6 +52,10 @@ public class UserServiceImpl implements UserService{
 		}
 	}
 
+	public void changePasswd(User user) {
+        updateUser(user);
+    }
+
 	
 	public void deleteUserBySSO(String sso) {
 		dao.deleteBySSO(sso);
