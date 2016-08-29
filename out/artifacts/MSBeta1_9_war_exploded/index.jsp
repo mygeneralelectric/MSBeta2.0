@@ -23,7 +23,7 @@
         <li><a href="#insurance_product" class="white-text">保险产品</a></li>
         <li><a href="#about_us" class="white-text">关于我们</a></li>
         <li><a href="#connect_us" class="white-text">联系我们</a></li>
-        <li><a href="/login" class="white-text">登录</a></li>
+        <li><a href="/login" class="waves-effect waves-light btn" style="border-radius:1.5em;">登录</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">

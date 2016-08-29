@@ -53,9 +53,9 @@
             </table>
         </div>
 
-        <%--<div class="well">--%>
-            <%--<a href="<c:url value='/change-passwd' />">change-passwd</a>--%>
-        <%--</div>--%>
+        <div class="well">
+            <a href="<c:url value='/change-passwd-${users.ssoId}' />" class="btn btn-success custom-width">edit</a>
+        </div>
 
         <sec:authorize access="hasRole('AREA') or hasRole('GROUP')">
             <div class="well">

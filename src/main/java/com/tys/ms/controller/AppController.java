@@ -226,8 +226,21 @@ public class AppController {
      * This method will be called on form submission, handling POST request for
      * updating user in database. It also validates the user input
      */
+    @RequestMapping(value = { "/change-passwd-{ssoId}" }, method = RequestMethod.GET)
+    public String changePasswd(ModelMap model, @PathVariable String ssoId) {
+        User user = userService.findBySSO(ssoId);
+        model.addAttribute("user", user);
+        model.addAttribute("edit", true);
+        return "cp";
+    }
+
+
+    /**
+     * This method will be called on form submission, handling POST request for
+     * updating user in database. It also validates the user input
+     */
     @RequestMapping(value = { "/change-passwd-{ssoId}" }, method = RequestMethod.POST)
-    public String changePasswd(@RequestParam("newPassword") String newpassword, ModelMap model, @PathVariable String ssoId) {
+    public String changePasswd(@RequestParam("password") String password, ModelMap model, @PathVariable String ssoId) {
 //        if (result.hasErrors()) {
 //            model.addAttribute("edit", true);
 //            int upId = userService.findBySSO(ssoId).getUserProfiles().getId();
@@ -244,7 +257,7 @@ public class AppController {
 		}*/
 
 		User user = userService.findBySSO(ssoId);
-        user.setPassword(newpassword);
+        user.setPassword(password);
 
         userService.updateUser(user);
 

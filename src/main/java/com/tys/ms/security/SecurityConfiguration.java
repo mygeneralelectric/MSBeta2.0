@@ -38,6 +38,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                 .antMatchers("/", "/info").access("hasRole('REGULAR') or hasRole('GROUP') or hasRole('AREA') or hasRole('ADMIN')")
+                .antMatchers("/", "/change-passwd-*").access("hasRole('REGULAR') or hasRole('GROUP') or hasRole('AREA') or hasRole('ADMIN')")
                 .antMatchers("/", "/list").access("hasRole('GROUP') or hasRole('AREA') or hasRole('ADMIN') or hasRole('ADMIN')")
                 .antMatchers("/", "/all-list").access("hasRole('ADMIN')")
                 .antMatchers("/newuser/**", "/delete-user-*", "/edit-user-*").access("hasRole('GROUP') or hasRole('AREA') or hasRole('ADMIN')")
