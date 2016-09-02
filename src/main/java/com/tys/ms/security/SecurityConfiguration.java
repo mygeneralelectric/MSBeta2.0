@@ -44,6 +44,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/newuser/**", "/delete-user-*", "/edit-user-*").access("hasRole('GROUP') or hasRole('AREA') or hasRole('ADMIN')")
                 .and().formLogin().loginPage("/login")
                 .loginProcessingUrl("/login").usernameParameter("ssoId").passwordParameter("password")
+                .defaultSuccessUrl("/info", true)
                 .and().rememberMe().rememberMeParameter("remember-me").tokenRepository(tokenRepository)
                 .tokenValiditySeconds(86400)
                 .and().csrf()
