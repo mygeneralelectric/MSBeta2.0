@@ -29,7 +29,7 @@
             </div>
             <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
             <div class="button-container">
-                <button type="submit"><span>Go</span></button>
+                <button type="submit"><span>登陆</span></button>
             </div>
             <div class="footer"><a href="#">Forgot your password?</a></div>
         </form>
