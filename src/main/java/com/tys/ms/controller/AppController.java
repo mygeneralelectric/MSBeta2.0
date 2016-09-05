@@ -96,12 +96,13 @@ public class AppController {
     /**
      * This method handles userInfo requests.
      */
-    @RequestMapping(value = { "/", "/info" }, method = RequestMethod.GET)
+    @RequestMapping(value = "/info", method = RequestMethod.GET)
     public String userInfo(ModelMap model) {
 
         User users = userService.findBySSO(getPrincipal());
         model.addAttribute("users", users);
         model.addAttribute("loggedinuser", getPrincipal());
+        model.addAttribute("loggedinusertype", users.getUserProfiles());
         return "userInfo";
     }
 
@@ -109,7 +110,7 @@ public class AppController {
     /**
      * This method will list all down users.
      */
-    @RequestMapping(value = { "/", "/list" }, method = RequestMethod.GET)
+    @RequestMapping(value = "/list", method = RequestMethod.GET)
     public String listUsers(ModelMap model) {
         List<User> users = userService.findTwiceDownUsers(getPrincipal());
         model.addAttribute("users", users);

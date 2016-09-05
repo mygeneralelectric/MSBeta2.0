@@ -7,11 +7,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
     <title>会员管理</title>
-    <link rel="stylesheet"  href="<c:url value='/static/css/materialize.css' />" media="screen,projection" />
+    <link rel="stylesheet"  href="<c:url value='/static/css/ghpages-materialize.css' />" media="screen,projection" />
     <link rel="stylesheet"  href="<c:url value='/static/css/style.css' />" media="screen,projection" />
 </head>
 
 <body>
+	<%@include file="header.jsp"%>
+
 	<main>
 		<div class="container">
 			<div class="section">

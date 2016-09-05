@@ -2,16 +2,49 @@
 <%@ page isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
-<html>
+<!DOCTYPE html>
+<html  lang="zh">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
     <title>会员信息</title>
     <link rel="stylesheet" href="<c:url value='/static/css/material-icons.css' />" media="screen,projection">
-    <link rel="stylesheet"  href="<c:url value='/static/css/materialize.css' />" media="screen,projection" />
+    <link rel="stylesheet"  href="<c:url value='/static/css/ghpages-materialize.css' />" media="screen,projection" />
     <link rel="stylesheet"  href="<c:url value='/static/css/style.css' />" media="screen,projection" />
 </head>
 <body>
+    <%@include file="header.jsp"%>
+
+    <%--<header>--%>
+        <%--<nav class="top-nav blue lighten-1">--%>
+            <%--<div class="container">--%>
+                <%--<div class="nav-wrapper"><a class="page-title">泰允升</a></div>--%>
+            <%--</div>--%>
+        <%--</nav>--%>
+
+        <%--<div class="container">--%>
+            <%--<a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a>--%>
+        <%--</div>--%>
+
+        <%--<ul id="nav-mobile" class="side-nav fixed" style="overflow-x: hidden;overflow-y: hidden;">--%>
+            <%--<li>--%>
+                <%--<div class="userView">--%>
+                    <%--<img class="background" src="image/index/office.jpg">--%>
+                    <%--<a href="#"><img class="circle" src="image/index/office.jpg"></a>--%>
+                    <%--<a href="#"><span class="white-text name-info">admin01</span></a>--%>
+                    <%--<a href="#"><span class="white-text type-info">欢迎，你的身份是管理员</span></a>--%>
+                <%--</div>--%>
+            <%--</li>--%>
+            <%--<li>--%>
+                <%--<div class="card center" style="margin:5px;">--%>
+                    <%--<a href="#">退出登录</a>--%>
+                <%--</div>--%>
+            <%--</li>--%>
+            <%--<li class="bold"><a href="about.html" class="waves-effect waves-teal">会员信息</a></li>--%>
+            <%--<li class="bold"><a href="about.html" class="waves-effect waves-teal">会员管理</a></li>--%>
+        <%--</ul>--%>
+    <%--</header>--%>
+
     <main>
         <div class="container">
             <div class="section">
@@ -98,8 +131,8 @@
                 <%--<a href="<c:url value='/all-list' />">UserList</a>--%>
             <%--</div>--%>
         <%--</sec:authorize>--%>
+    <%--</div>--%>
 
 
-    </div>
 </body>
 </html>
