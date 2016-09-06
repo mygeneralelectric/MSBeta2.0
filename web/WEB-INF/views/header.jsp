@@ -10,14 +10,14 @@
         <a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a>
     </div>
 
-    <ul id="nav-mobile" class="side-nav fixed" style="overflow-x: hidden;overflow-y: hidden;">
+    <ul id="nav-mobile" class="side-nav fixed" style="overflow-x: hidden; overflow-y: hidden;">
         <li>
             <div class="userView">
-                <img class="background" src="static/image/index/nav-bg.png">
-                <a href="#"><img class="circle" src="static/image/index/office.jpg"></a>
-                <a href="#"><span class="white-text name-info">${loggedinuser}</span></a>
+                <img class="background" src="static/image/index/nav-bg10.png">
+                <a href="#"><img class="circle" src="static/image/index/user.png"></a>
+                <a href="#"><span class="name-info">${loggedinuser}</span></a>
                 <sec:authorize access="hasRole('ADMIN')">
-                    <a href="#"><span class="white-text type-info">欢迎，你的身份是管理员</span></a>
+                    <a href="#"><span class="type-info">欢迎，你的身份是管理员</span></a>
                 </sec:authorize>
                 <sec:authorize access="hasRole('AREA')">
                     <a href="#"><span class="white-text type-info">欢迎，你的身份是总监</span></a>
@@ -31,7 +31,7 @@
             </div>
         </li>
         <li>
-            <div class="card center" style="margin:5px;">
+            <div class="card red center" style="margin:5px;">
                 <a href="<c:url value="/logout" />">退出登录</a>
             </div>
         </li>
