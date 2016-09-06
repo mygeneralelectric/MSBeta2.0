@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6cc4fa85-0f50-47e8-b37d-33ebd631ef6c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/index/nav-bg10.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/index/nav-bg2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/index/nav-bg3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/index/nav-bg4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/index/nav-bg5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/index/nav-bg6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/index/nav-bg8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/index/nav-bg9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/static/image/index/user.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/application.properties" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/header.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/header.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/views/registration.jsp" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/views/registration.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/views/userslist.jsp" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/views/userslist.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/cp.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/cp.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/registration.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/registration.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/userslist.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/userslist.jsp" />
     </list>
     <ignored path="MSBeta1.9.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,7 +22,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
+    <option name="PATCH_PATH" value="E:\important\project\IntelliJProjects\demo\MSBeta2.0" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -39,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="header.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="header.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/header.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-899">
-              <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+            <state relative-caret-position="1334">
+              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -52,8 +43,18 @@
       <file leaf-file-name="userslist.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/userslist.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1769">
-              <caret line="61" column="53" selection-start-line="61" selection-start-column="48" selection-end-line="61" selection-end-column="53" />
+            <state relative-caret-position="145">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="registration.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/registration.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="348">
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -62,8 +63,8 @@
       <file leaf-file-name="userInfo.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/userInfo.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3770">
-              <caret line="130" column="52" selection-start-line="130" selection-start-column="43" selection-end-line="130" selection-end-column="52" />
+            <state relative-caret-position="116">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -74,6 +75,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="29">
               <caret line="5173" column="25" selection-start-line="5173" selection-start-column="17" selection-end-line="5173" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cp.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/cp.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="93" column="18" selection-start-line="93" selection-start-column="18" selection-end-line="93" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -138,15 +149,12 @@
         <option value="$PROJECT_DIR$/src/main/resources/messages.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/tys/ms/model/User.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/chang-passwd.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/registration.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/tys/ms/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tys/ms/service/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tys/ms/configuration/AppConfig.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/changPasswd.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/tys/ms/security/SecurityConfiguration.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/login.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/userslist.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/cp.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/tys/ms/controller/AppController.java" />
         <option value="$PROJECT_DIR$/web/test.html" />
         <option value="$PROJECT_DIR$/web/test.jsp" />
@@ -154,6 +162,9 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/views/userInfo.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/header.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/views/userslist.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/views/cp.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/views/registration.jsp" />
       </list>
     </option>
   </component>
@@ -1234,7 +1245,7 @@
       <workItem from="1472993078686" duration="5313000" />
       <workItem from="1473060407131" duration="6484000" />
       <workItem from="1473067867942" duration="130000" />
-      <workItem from="1473086955287" duration="5561000" />
+      <workItem from="1473086955287" duration="10372000" />
     </task>
     <task id="LOCAL-00001" summary="2016-08-27">
       <created>1472290484952</created>
@@ -1285,11 +1296,18 @@
       <option name="project" value="LOCAL" />
       <updated>1472806121063</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="2016-09-06 am1">
+      <created>1473126409302</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1473126409302</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157156000" />
+    <option name="totallyTimeSpent" value="161967000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1302,7 +1320,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32824427" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1313,7 +1331,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3786885" sideWeight="0.515885" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32786885" sideWeight="0.49167928" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32786885" sideWeight="0.49167928" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.018032787" sideWeight="0.48411497" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1354,7 +1372,8 @@
     <MESSAGE value="2016-08-30 am1" />
     <MESSAGE value="2016-08-30 am1 fixed" />
     <MESSAGE value="2016-09-02 pm1" />
-    <option name="LAST_COMMIT_MESSAGE" value="2016-09-02 pm1" />
+    <MESSAGE value="2016-09-06 am1" />
+    <option name="LAST_COMMIT_MESSAGE" value="2016-09-06 am1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1615,14 +1634,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/registration.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-58">
-          <caret line="103" column="35" selection-start-line="103" selection-start-column="35" selection-end-line="103" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/registrationsuccess.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="725">
@@ -1643,14 +1654,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="29">
           <caret line="1" column="128" selection-start-line="1" selection-start-column="103" selection-end-line="1" selection-end-column="128" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/cp.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2552">
-          <caret line="93" column="18" selection-start-line="93" selection-start-column="18" selection-end-line="93" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -1694,22 +1697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/userInfo.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3770">
-          <caret line="130" column="52" selection-start-line="130" selection-start-column="43" selection-end-line="130" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/userslist.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1769">
-          <caret line="61" column="53" selection-start-line="61" selection-start-column="48" selection-end-line="61" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/static/css/ghpages-materialize.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="29">
@@ -1728,8 +1715,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/header.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-899">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+        <state relative-caret-position="1334">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/userInfo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/userslist.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/cp.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="93" column="18" selection-start-line="93" selection-start-column="18" selection-end-line="93" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/registration.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
