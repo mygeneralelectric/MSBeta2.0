@@ -1,8 +1,6 @@
 package com.tys.ms.model;
 
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -24,16 +22,12 @@ public class User implements Serializable {
     private String password;
 
     @NotEmpty
-    @Column(name="FIRST_NAME", nullable=false)
-    private String firstName;
+    @Column(name="NAME", nullable=false)
+    private String name;
 
     @NotEmpty
-    @Column(name="LAST_NAME", nullable=false)
-    private String lastName;
-
-    @NotEmpty
-    @Column(name="EMAIL", nullable=false)
-    private String email;
+    @Column(name="PHONE", nullable=false)
+    private String phone;
 
     @NotEmpty
     @Column(name="UPBOSSID")
@@ -71,28 +65,20 @@ public class User implements Serializable {
         this.password = password;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getName() {
+        return name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public UserProfile getUserProfiles() {
@@ -149,7 +135,7 @@ public class User implements Serializable {
     @Override
     public String toString() {
         return "User [id=" + id + ", ssoId=" + ssoId + ", password=" + password
-                + ", firstName=" + firstName + ", lastName=" + lastName
-                + ", email=" + email + "]";
+                + ", name=" + name
+                + ", phone=" + phone + "]";
     }
 }

@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <header>
     <nav class="top-nav blue lighten-1">
         <div class="container">
@@ -14,7 +14,7 @@
         <li>
             <div class="userView">
                 <img class="background" src="static/image/index/nav-bg.png">
-                <a href="#"><img class="circle" src="static/image/index/office.jpg"></a>
+                <a href="#"><img class="circle" src="static/image/index/user.png"></a>
                 <a href="#"><span class="white-text name-info">${loggedinuser}</span></a>
                 <sec:authorize access="hasRole('ADMIN')">
                     <a href="#"><span class="white-text type-info">欢迎，你的身份是管理员</span></a>

@@ -2,6 +2,7 @@
 <%@ page isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html lang="zh">
 <head>
@@ -9,11 +10,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
     <title>泰允升网络科技有限公司</title>
     <%--<link href="static/css/material-icons.css" rel="stylesheet">--%>
-    <%--<link href="static/css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>--%>
+    <%--<link href="static/css/ms-materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>--%>
     <%--<link href="static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>--%>
 
     <link rel="stylesheet" href="<c:url value='/static/css/material-icons.css' />" media="screen,projection">
-    <link rel="stylesheet"  href="<c:url value='/static/css/ghpages-materialize.css' />" media="screen,projection" />
+    <link rel="stylesheet" href="<c:url value='/static/css/ms-materialize.css' />" media="screen,projection" />
     <link rel="stylesheet"  href="<c:url value='/static/css/style.css' />" media="screen,projection" />
 </head>
 <body>
@@ -49,12 +50,16 @@
 
 <main>
     <div class="container">
+
+        <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+        <label for="first_name">First Name</label>
+
         <div class="section">
             <h2 class="header">会员信息</h2>
             <c:if test="${not empty users}">
-                <p>firstName : ${users.firstName}</p>
+                <p>name : ${users.name}</p>
                 <p>lastName : ${users.lastName}</p>
-                <p>email : ${users.email}</p>
+                <p>phone : ${users.phone}</p>
                 <p>ssoId : ${users.ssoId}</p>
             </c:if>
             <a  href="<c:url value='/change-passwd-${users.ssoId}' />" class="waves-effect waves-light btn"><i class="material-icons left">edit</i>修改密码</a>
