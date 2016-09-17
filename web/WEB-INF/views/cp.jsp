@@ -25,12 +25,30 @@
 
                     <div class="row">
                         <div class="input-field col s12 m6">
+                            <form:input type="password" path="oldPassword" id="oldPassword" class="validate" />
+                            <label for="oldPassword">oldPassword</label>
+                        </div>
+
+                        <div class="col s12 m6">
+                            <form:errors path="oldPassword" class="help-inline"/>
+                        </div>
+
+                        <div class="input-field col s12 m6">
                             <form:input type="password" path="password" id="password" class="validate" />
                             <label for="password">First Name</label>
                         </div>
 
                         <div class="col s12 m6">
                             <form:errors path="password" class="help-inline"/>
+                        </div>
+
+                        <div class="input-field col s12 m6">
+                            <form:input type="password" path="retypePassword" id="retypePassword" class="validate" />
+                            <label for="retypePassword">retypePassword</label>
+                        </div>
+
+                        <div class="col s12 m6">
+                            <form:errors path="retypePassword" class="help-inline"/>
                         </div>
 
                         <div class="col s12 m12">

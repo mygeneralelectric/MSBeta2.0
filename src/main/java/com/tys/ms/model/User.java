@@ -21,6 +21,28 @@ public class User implements Serializable {
     @Column(name="PASSWORD", nullable=false)
     private String password;
 
+    public String getRetypePassword() {
+        return retypePassword;
+    }
+
+    public void setRetypePassword(String retypePassword) {
+        this.retypePassword = retypePassword;
+    }
+
+    @Transient
+    private String retypePassword;
+
+    public String getOldPassword() {
+        return oldPassword;
+    }
+
+    public void setOldPassword(String oldPassword) {
+        this.oldPassword = oldPassword;
+    }
+
+    @Transient
+    private String oldPassword;
+
     @NotEmpty
     @Column(name="NAME", nullable=false)
     private String name;
@@ -39,7 +61,7 @@ public class User implements Serializable {
     @JoinTable(name = "APP_USER_USER_PROFILE",
             joinColumns = { @JoinColumn(name = "USER_ID") },
             inverseJoinColumns = { @JoinColumn(name = "USER_PROFILE_ID") })
-    private UserProfile userProfile = null;
+    private UserProfile userProfiles = null;
 
     public Integer getId() {
         return id;
@@ -82,11 +104,11 @@ public class User implements Serializable {
     }
 
     public UserProfile getUserProfiles() {
-        return userProfile;
+        return userProfiles;
     }
 
     public void setUserProfiles(UserProfile userProfile) {
-        this.userProfile = userProfile;
+        this.userProfiles = userProfile;
     }
 
     public String getUpBossId() {

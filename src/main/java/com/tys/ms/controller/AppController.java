@@ -2,6 +2,8 @@ package com.tys.ms.controller;
 
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCrypt;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -57,6 +59,18 @@ public class AppController {
             userName = principal.toString();
         }
         return userName;
+    }
+
+    private String getPrincipalPwd(){
+        String userPwd = null;
+        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+
+        if (principal instanceof UserDetails) {
+            userPwd = ((UserDetails)principal).getPassword();
+        } else {
+            userPwd = principal.toString();
+        }
+        return userPwd;
     }
 
     /**
@@ -173,6 +187,12 @@ public class AppController {
             return "registration";
         }
 
+        if(user.getPassword() != user.getRetypePassword()) {
+            FieldError ssoError =new FieldError("user","ssoId",messageSource.getMessage("valid.passwordConfDiff", new String[]{user.getSsoId()}, Locale.getDefault()));
+            result.addError(ssoError);
+            return "registration";
+        }
+
         userService.saveUser(user);
 
         model.addAttribute("success", "User " + user.getName() + " " + " registered successfully");
@@ -242,15 +262,61 @@ public class AppController {
      * This method will be called on form submission, handling POST request for
      * updating user in database. It also validates the user input
      */
-    @RequestMapping(value = { "/change-passwd-{ssoId}" }, method = RequestMethod.POST)
-    public String changePasswd(@RequestParam("password") String password,  ModelMap model, @PathVariable String ssoId) {
+//    @RequestMapping(value = { "/change-passwd-{ssoId}" }, method = RequestMethod.POST)
+//    public String changePasswd(@RequestParam("oldPassword") String oldPassword,
+//                               @RequestParam("password") String password,
+//                               @RequestParam("retypePassword") String retypePassword,
+//                               ModelMap model, @PathVariable String ssoId) {
+//
+//        User user = userService.findBySSO(ssoId);
+//
+//        if (oldPassword != getPrincipalPwd()) {
+////            FieldError passwordError =new FieldError("user","password",messageSource.getMessage("valid.oldPassword", new String[]{user.getPassword()}, Locale.getDefault()));
+////            result.addError(passwordError);
+//            return "cp";
+//        }
+//
+//        if(password != retypePassword) {
+////            FieldError passwordError =new FieldError("user","password",messageSource.getMessage("valid.passwordConfDiff", new String[]{user.getPassword()}, Locale.getDefault()));
+////            result.addError(passwordError);
+//            return "cp";
+//        }
+//
+//        user.setPassword(String.valueOf(password));
+//
+//        userService.updateUser(user);
+//        model.addAttribute("success", "User " + user.getName()  + " updated successfully");
+//        model.addAttribute("loggedinuser", getPrincipal());
+//        return "cpDone";
+//
+//    }
 
-        User user = userService.findBySSO(ssoId);
-        user.setPassword(String.valueOf(password));
-        userService.updateUser(user);
-        model.addAttribute("success", "User " + user.getName()  + " updated successfully");
-        model.addAttribute("loggedinuser", getPrincipal());
-        return "cpDone";
+    @RequestMapping(value = { "/change-passwd-{ssoId}" }, method = RequestMethod.POST)
+    public String changePasswd(
+            User user, BindingResult result,
+                               ModelMap model, @PathVariable String ssoId) {
+
+        User user2 = userService.findBySSO(ssoId);
+
+        if (!BCrypt.checkpw(user.getOldPassword(), user2.getPassword())) {
+            FieldError passwordError =new FieldError("user","password",messageSource.getMessage("valid.oldPassword", new String[]{user.getPassword()}, Locale.getDefault()));
+            result.addError(passwordError);
+            return "cp";
+        } else if(!user.getPassword().equals(user.getRetypePassword())) {
+            System.out.println(user.getPassword());
+            System.out.println(user.getRetypePassword());
+            FieldError passwordError =new FieldError("user","password",messageSource.getMessage("valid.passwordConfDiff", new String[]{user.getPassword()}, Locale.getDefault()));
+//            System.out.println(user.getPassword() != user.getRetypePassword());
+            result.addError(passwordError);
+            return "cp";
+        } else {
+            user2.setPassword(String.valueOf(user.getPassword()));
+
+            userService.updateUser(user2);
+            model.addAttribute("success", "User " + user.getName()  + " updated successfully");
+            model.addAttribute("loggedinuser", getPrincipal());
+            return "cpDone";
+        }
 
     }
 

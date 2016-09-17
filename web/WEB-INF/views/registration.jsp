@@ -46,6 +46,16 @@
 
                         <div class="row">
                             <div class="input-field col s12 m6">
+                                <form:input placeholder="请输入内容" type="password" path="retypePassword" id="retypePassword" class="validate" />
+                                <label for="retypePassword">retypePassword</label>
+                            </div>
+                            <div class="col s12 m6">
+                                <form:errors path="retypePassword" class="help-inline"/>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12 m6">
                                 <form:input placeholder="请输入内容" type="text" path="name" id="name" class="validate"/>
                                 <label for="name">Name</label>
                             </div>
