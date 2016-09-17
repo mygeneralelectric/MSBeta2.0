@@ -4,14 +4,13 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Set;
-
 import com.tys.ms.model.UserProfile;
 import org.hibernate.Criteria;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 
 @Repository("userProfileDao")
-public class UserProfileDaoImpl extends AbstractDao<Integer, UserProfile>implements UserProfileDao{
+public class UserProfileDaoImpl extends AbstractDao<Integer, UserProfile> implements UserProfileDao {
 
 	public UserProfile findById(int id) {
 		return getByKey(id);
@@ -19,24 +18,24 @@ public class UserProfileDaoImpl extends AbstractDao<Integer, UserProfile>impleme
 
 	@Override
 	public List<UserProfile> findDown(int upId) {
-        Criteria crit = createEntityCriteria();
-        crit.add(Restrictions.gt("id", upId));
-        return (List<UserProfile>)crit.list();
+        Criteria criteria = createEntityCriteria();
+        criteria.add(Restrictions.gt("id", upId));
+        return (List<UserProfile>)criteria.list();
 	}
 
 	public UserProfile findByType(String type) {
-		Criteria crit = createEntityCriteria();
-		crit.add(Restrictions.eq("type", type));
-		UserProfile userProfile = (UserProfile) crit.uniqueResult();
+		Criteria criteria = createEntityCriteria();
+		criteria.add(Restrictions.eq("type", type));
+		UserProfile userProfile = (UserProfile) criteria.uniqueResult();
 		System.out.println(userProfile.getType());
-		return (UserProfile) crit.uniqueResult();
+		return (UserProfile) criteria.uniqueResult();
 	}
 	
 	@SuppressWarnings("unchecked")
 	public List<UserProfile> findAll(){
-		Criteria crit = createEntityCriteria();
-		crit.addOrder(Order.asc("type"));
-		return (List<UserProfile>)crit.list();
+		Criteria criteria = createEntityCriteria();
+		criteria.addOrder(Order.asc("type"));
+		return (List<UserProfile>)criteria.list();
 	}
 
     @SuppressWarnings("unchecked")
@@ -48,6 +47,4 @@ public class UserProfileDaoImpl extends AbstractDao<Integer, UserProfile>impleme
         set.add(getByKey(4));
         return set;
     }
-
-
 }

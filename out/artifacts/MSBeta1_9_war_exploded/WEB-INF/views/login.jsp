@@ -14,8 +14,9 @@
 <body style="background: #e9e9e9;">
     <main>
         <div class="container">
+
             <div class="section">
-                <h2 class="center">泰允升</h2>
+                <h2 class="center">泰允升科技</h2>
                 <h5 class="center">后台管理系统</h5>
             </div>
 
@@ -30,8 +31,8 @@
                         <div class="row" style="padding: 20px;">
 
                             <div class="input-field col s12">
-                                <input type="text" id="name" placeholder="请输入工号" path="ssoId" name="ssoId"  class="validate" required="required" autocomplete='off'  />
-                                <label for="name">用户名</label>
+                                <input type="text" id="name" placeholder="请输入工号" path="jobId" name="jobId"  class="validate" required="required" autocomplete="off"  />
+                                <label for="name">工号</label>
                             </div>
 
                             <div class="input-field col s12">
@@ -43,7 +44,7 @@
 
                             <div class="col s12">
                                 <c:if test="${param.error != null}">
-                                    <div class="red">
+                                    <div class="card red">
                                         <p class="center white-text">用户名或密码不正确</p>
                                     </div>
                                 </c:if>

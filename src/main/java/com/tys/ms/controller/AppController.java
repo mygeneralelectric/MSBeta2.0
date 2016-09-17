@@ -3,9 +3,7 @@ package com.tys.ms.controller;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCrypt;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import com.tys.ms.model.UserProfile;
@@ -25,7 +23,6 @@ import org.springframework.security.web.authentication.rememberme.PersistentToke
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
-import sun.security.util.Password;
 
 @Controller
 @RequestMapping("/")
@@ -46,9 +43,6 @@ public class AppController {
     @Autowired
     AuthenticationTrustResolver authenticationTrustResolver;
 
-    /**
-     * This method returns the principal[user-name] of logged-in user.
-     */
     private String getPrincipal(){
         String userName = null;
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
@@ -61,30 +55,11 @@ public class AppController {
         return userName;
     }
 
-    private String getPrincipalPwd(){
-        String userPwd = null;
-        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-
-        if (principal instanceof UserDetails) {
-            userPwd = ((UserDetails)principal).getPassword();
-        } else {
-            userPwd = principal.toString();
-        }
-        return userPwd;
-    }
-
-    /**
-     * This method returns true if users is already authenticated [logged-in], else false.
-     */
     private boolean isCurrentAuthenticationAnonymous() {
         final Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         return authenticationTrustResolver.isAnonymous(authentication);
     }
 
-    /**
-     * This method handles login GET requests.
-     * If users is already logged-in and tries to goto login page again, will be redirected to list page.
-     */
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String loginPage() {
         if (isCurrentAuthenticationAnonymous()) {
@@ -94,10 +69,6 @@ public class AppController {
         }
     }
 
-    /**
-     * This method handles logout requests.
-     * Toggle the handlers if you are RememberMe functionality is useless in your app.
-     */
     @RequestMapping(value="/logout", method = RequestMethod.GET)
     public String logoutPage (HttpServletRequest request, HttpServletResponse response){
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
@@ -109,195 +80,114 @@ public class AppController {
         return "redirect:/login?logout";
     }
 
-    /**
-     * This method handles userInfo requests.
-     */
     @RequestMapping(value = "/info", method = RequestMethod.GET)
     public String userInfo(ModelMap model) {
-
-        User users = userService.findBySSO(getPrincipal());
+        User users = userService.findByJobId(getPrincipal());
         model.addAttribute("users", users);
-        model.addAttribute("loggedinuser", getPrincipal());
-        model.addAttribute("loggedinusertype", users.getUserProfiles());
+        model.addAttribute("loginUser", getPrincipal());
+        model.addAttribute("loginUserType", users.getUserProfile());
         return "userInfo";
     }
 
-
-    /**
-     * This method will list all down users.
-     */
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public String listUsers(ModelMap model) {
-        List<User> users = userService.findTwiceDownUsers(getPrincipal());
+        List<User> users = userService.findAllDownUsers(getPrincipal());
         model.addAttribute("users", users);
-        model.addAttribute("loggedinuser", getPrincipal());
-        return "userslist";
+        model.addAttribute("loginUser", getPrincipal());
+        return "userList";
     }
 
-    /**
-     * This method will list all existing users.
-     */
     @RequestMapping(value = { "/", "/all-list" }, method = RequestMethod.GET)
     public String listAllUsers(ModelMap model) {
         List<User> users = userService.findAllUsers();
         model.addAttribute("users", users);
-        model.addAttribute("loggedinuser", getPrincipal());
-        return "userslist";
+        model.addAttribute("loginUser", getPrincipal());
+        return "userList";
     }
 
-    /**
-     * This method will provide the medium to add a new user.
-     */
-    @RequestMapping(value = { "/newuser" }, method = RequestMethod.GET)
+    @RequestMapping(value = "/addUser", method = RequestMethod.GET)
     public String newUser(ModelMap model) {
         User user = new User();
-        int upId = userService.findBySSO(getPrincipal()).getUserProfiles().getId();
+        int upId = userService.findByJobId(getPrincipal()).getUserProfile().getId();
         List<UserProfile> userProfileList = userProfileService.findDownAll(upId);
         model.addAttribute("user", user);
         model.addAttribute("edit", false);
         model.addAttribute("profile", userProfileList);
-        model.addAttribute("loggedinuser", getPrincipal());
+        model.addAttribute("loginUser", getPrincipal());
         return "registration";
     }
 
-    /**
-     * This method will be called on form submission, handling POST request for
-     * saving user in database. It also validates the user input
-     */
-    @RequestMapping(value = { "/newuser" }, method = RequestMethod.POST)
+    @RequestMapping(value = "/addUser", method = RequestMethod.POST)
     public String saveUser(@Valid User user, BindingResult result, ModelMap model) {
         if (result.hasErrors()) {
-            int upId = userService.findBySSO(getPrincipal()).getUserProfiles().getId();
+            int upId = userService.findByJobId(getPrincipal()).getUserProfile().getId();
             List<UserProfile> userProfileList = userProfileService.findDownAll(upId);
             model.addAttribute("profile", userProfileList);
             return "registration";
         }
 
-		/*
-		 * Preferred way to achieve uniqueness of field [sso] should be implementing custom @Unique annotation
-		 * and applying it on field [sso] of Model class [User].
-		 *
-		 * Below mentioned peace of code [if block] is to demonstrate that you can fill custom errors outside the validation
-		 * framework as well while still using internationalized messages.
-		 *
-		 */
-        if(!userService.isUserSSOUnique(user.getId(), user.getSsoId())){
-            FieldError ssoError =new FieldError("user","ssoId",messageSource.getMessage("non.unique.ssoId", new String[]{user.getSsoId()}, Locale.getDefault()));
-            result.addError(ssoError);
+        if(!userService.isUserJobIdUnique(user.getId(), user.getJobId())){
+            int upId = userService.findByJobId(getPrincipal()).getUserProfile().getId();
+            List<UserProfile> userProfileList = userProfileService.findDownAll(upId);
+            model.addAttribute("profile", userProfileList);
+            FieldError jobIdError =new FieldError("user","jobId",messageSource.getMessage("non.unique.jobId", new String[]{user.getJobId()}, Locale.getDefault()));
+            result.addError(jobIdError);
             return "registration";
         }
 
         if(user.getPassword() != user.getRetypePassword()) {
-            FieldError ssoError =new FieldError("user","ssoId",messageSource.getMessage("valid.passwordConfDiff", new String[]{user.getSsoId()}, Locale.getDefault()));
-            result.addError(ssoError);
+            int upId = userService.findByJobId(getPrincipal()).getUserProfile().getId();
+            List<UserProfile> userProfileList = userProfileService.findDownAll(upId);
+            model.addAttribute("profile", userProfileList);
+            FieldError pwdError =new FieldError("user","jobId",messageSource.getMessage("valid.passwordConfDiff", new String[]{user.getJobId()}, Locale.getDefault()));
+            result.addError(pwdError);
             return "registration";
         }
 
         userService.saveUser(user);
 
         model.addAttribute("success", "User " + user.getName() + " " + " registered successfully");
-        model.addAttribute("loggedinuser", getPrincipal());
-        //return "success";
-        return "registrationsuccess";
+        model.addAttribute("loginUser", getPrincipal());
+        return "registrationDone";
     }
 
-
-    /**
-     * This method will provide the medium to update an existing user.
-     */
-    @RequestMapping(value = { "/edit-user-{ssoId}" }, method = RequestMethod.GET)
-    public String editUser(@PathVariable String ssoId, ModelMap model) {
-        User user = userService.findBySSO(ssoId);
+    @RequestMapping(value = { "/edit-user-{jobId}" }, method = RequestMethod.GET)
+    public String editUser(@PathVariable String jobId, ModelMap model) {
+        User user = userService.findByJobId(jobId);
         model.addAttribute("user", user);
         model.addAttribute("edit", true);
-        int upId = userService.findBySSO(ssoId).getUserProfiles().getId();
+        int upId = userService.findByJobId(jobId).getUserProfile().getId();
         List<UserProfile> userProfileList = userProfileService.findDownAll(upId);
         model.addAttribute("profile", userProfileList);
-        model.addAttribute("loggedinuser", getPrincipal());
+        model.addAttribute("loginUser", getPrincipal());
         return "registration";
     }
 
-    /**
-     * This method will be called on form submission, handling POST request for
-     * updating user in database. It also validates the user input
-     */
-    @RequestMapping(value = { "/edit-user-{ssoId}" }, method = RequestMethod.POST)
-    public String updateUser(@Valid User user, BindingResult result, ModelMap model, @PathVariable String ssoId) {
+    @RequestMapping(value = { "/edit-user-{jobId}" }, method = RequestMethod.POST)
+    public String updateUser(@Valid User user, BindingResult result, ModelMap model, @PathVariable String jobId) {
         if (result.hasErrors()) {
             model.addAttribute("edit", true);
-            int upId = userService.findBySSO(ssoId).getUserProfiles().getId();
+            int upId = userService.findByJobId(jobId).getUserProfile().getId();
             List<UserProfile> userProfileList = userProfileService.findDownAll(upId);
             model.addAttribute("profile", userProfileList);
             return "registration";
         }
 
-		/*//Uncomment below 'if block' if you WANT TO ALLOW UPDATING SSO_ID in UI which is a unique key to a User.
-		if(!userService.isUserSSOUnique(user.getId(), user.getSsoId())){
-			FieldError ssoError =new FieldError("user","ssoId",messageSource.getMessage("non.unique.ssoId", new String[]{user.getSsoId()}, Locale.getDefault()));
-		    result.addError(ssoError);
-			return "registration";
-		}*/
-
         userService.updateUser(user);
 
         model.addAttribute("success", "User " + user.getName()  + " updated successfully");
-        model.addAttribute("loggedinuser", getPrincipal());
-        return "registrationsuccess";
+        model.addAttribute("loginUser", getPrincipal());
+        return "registrationDone";
     }
 
-    /**
-     * This method will be called on form submission, handling POST request for
-     * updating user in database. It also validates the user input
-     */
-    @RequestMapping(value = { "/change-passwd-{ssoId}" }, method = RequestMethod.GET)
-    public String changePasswd(ModelMap model, @PathVariable String ssoId) {
-        User user = userService.findBySSO(ssoId);
-        model.addAttribute("user", user);
-        model.addAttribute("edit", true);
+    @RequestMapping(value = { "/change-pwd-{jobId}" }, method = RequestMethod.GET)
+    public String changePwd(ModelMap model, @PathVariable String jobId) {
         return "cp";
     }
 
-
-    /**
-     * This method will be called on form submission, handling POST request for
-     * updating user in database. It also validates the user input
-     */
-//    @RequestMapping(value = { "/change-passwd-{ssoId}" }, method = RequestMethod.POST)
-//    public String changePasswd(@RequestParam("oldPassword") String oldPassword,
-//                               @RequestParam("password") String password,
-//                               @RequestParam("retypePassword") String retypePassword,
-//                               ModelMap model, @PathVariable String ssoId) {
-//
-//        User user = userService.findBySSO(ssoId);
-//
-//        if (oldPassword != getPrincipalPwd()) {
-////            FieldError passwordError =new FieldError("user","password",messageSource.getMessage("valid.oldPassword", new String[]{user.getPassword()}, Locale.getDefault()));
-////            result.addError(passwordError);
-//            return "cp";
-//        }
-//
-//        if(password != retypePassword) {
-////            FieldError passwordError =new FieldError("user","password",messageSource.getMessage("valid.passwordConfDiff", new String[]{user.getPassword()}, Locale.getDefault()));
-////            result.addError(passwordError);
-//            return "cp";
-//        }
-//
-//        user.setPassword(String.valueOf(password));
-//
-//        userService.updateUser(user);
-//        model.addAttribute("success", "User " + user.getName()  + " updated successfully");
-//        model.addAttribute("loggedinuser", getPrincipal());
-//        return "cpDone";
-//
-//    }
-
-    @RequestMapping(value = { "/change-passwd-{ssoId}" }, method = RequestMethod.POST)
-    public String changePasswd(
-            User user, BindingResult result,
-                               ModelMap model, @PathVariable String ssoId) {
-
-        User user2 = userService.findBySSO(ssoId);
-
+    @RequestMapping(value = { "/change-pwd-{jobId}" }, method = RequestMethod.POST)
+    public String changePwd(User user, BindingResult result, ModelMap model, @PathVariable String jobId) {
+        User user2 = userService.findByJobId(jobId);
         if (!BCrypt.checkpw(user.getOldPassword(), user2.getPassword())) {
             FieldError passwordError =new FieldError("user","password",messageSource.getMessage("valid.oldPassword", new String[]{user.getPassword()}, Locale.getDefault()));
             result.addError(passwordError);
@@ -306,40 +196,28 @@ public class AppController {
             System.out.println(user.getPassword());
             System.out.println(user.getRetypePassword());
             FieldError passwordError =new FieldError("user","password",messageSource.getMessage("valid.passwordConfDiff", new String[]{user.getPassword()}, Locale.getDefault()));
-//            System.out.println(user.getPassword() != user.getRetypePassword());
             result.addError(passwordError);
             return "cp";
         } else {
             user2.setPassword(String.valueOf(user.getPassword()));
-
             userService.updateUser(user2);
             model.addAttribute("success", "User " + user.getName()  + " updated successfully");
-            model.addAttribute("loggedinuser", getPrincipal());
+            model.addAttribute("loginUser", getPrincipal());
             return "cpDone";
         }
-
     }
 
-    /**
-     * This method will delete an user by it's SSOID value.
-     */
-    @RequestMapping(value = { "/delete-user-{ssoId}" }, method = RequestMethod.GET)
-    public String deleteUser(@PathVariable String ssoId) {
-        userService.deleteUserBySSO(ssoId);
+    @RequestMapping(value = { "/delete-user-{jobId}" }, method = RequestMethod.GET)
+    public String deleteUser(@PathVariable String jobId) {
+        userService.deleteUserByJobId(jobId);
         return "redirect:/list";
     }
 
-    /**
-     * This method will provide UserProfile list to views
-     */
     @ModelAttribute("roles")
     public List<UserProfile> initializeProfiles() {
         return userProfileService.findAll();
     }
 
-    /**
-     * This method handles Access-Denied redirect.
-     */
     @RequestMapping(value = "/Access_Denied", method = RequestMethod.GET)
     public String accessDeniedPage(ModelMap model) {
         model.addAttribute("loggedinuser", getPrincipal());

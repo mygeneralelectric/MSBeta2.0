@@ -1,10 +1,8 @@
 package com.tys.ms.model;
 
 import java.io.Serializable;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-
 import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
@@ -14,34 +12,18 @@ public class User implements Serializable {
     private Integer id;
 
     @NotEmpty
-    @Column(name="SSO_ID", unique=true, nullable=false)
-    private String ssoId;
+    @Column(name="JOB_ID", unique=true, nullable=false)
+    private String jobId;
+
+    @Transient
+    private String oldPassword;
 
     @NotEmpty
     @Column(name="PASSWORD", nullable=false)
     private String password;
 
-    public String getRetypePassword() {
-        return retypePassword;
-    }
-
-    public void setRetypePassword(String retypePassword) {
-        this.retypePassword = retypePassword;
-    }
-
     @Transient
     private String retypePassword;
-
-    public String getOldPassword() {
-        return oldPassword;
-    }
-
-    public void setOldPassword(String oldPassword) {
-        this.oldPassword = oldPassword;
-    }
-
-    @Transient
-    private String oldPassword;
 
     @NotEmpty
     @Column(name="NAME", nullable=false)
@@ -52,16 +34,15 @@ public class User implements Serializable {
     private String phone;
 
     @NotEmpty
-    @Column(name="UPBOSSID")
-    private String upBossId;
+    @Column(name="LEADER_ID")
+    private String leaderId;
 
-//    @NotEmpty
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinTable(name = "APP_USER_USER_PROFILE",
             joinColumns = { @JoinColumn(name = "USER_ID") },
             inverseJoinColumns = { @JoinColumn(name = "USER_PROFILE_ID") })
-    private UserProfile userProfiles = null;
+    private UserProfile userProfile;
 
     public Integer getId() {
         return id;
@@ -71,12 +52,20 @@ public class User implements Serializable {
         this.id = id;
     }
 
-    public String getSsoId() {
-        return ssoId;
+    public String getJobId() {
+        return jobId;
     }
 
-    public void setSsoId(String ssoId) {
-        this.ssoId = ssoId;
+    public void setJobId(String jobId) {
+        this.jobId = jobId;
+    }
+
+    public String getOldPassword() {
+        return oldPassword;
+    }
+
+    public void setOldPassword(String oldPassword) {
+        this.oldPassword = oldPassword;
     }
 
     public String getPassword() {
@@ -85,6 +74,14 @@ public class User implements Serializable {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getRetypePassword() {
+        return retypePassword;
+    }
+
+    public void setRetypePassword(String retypePassword) {
+        this.retypePassword = retypePassword;
     }
 
     public String getName() {
@@ -103,20 +100,20 @@ public class User implements Serializable {
         this.phone = phone;
     }
 
-    public UserProfile getUserProfiles() {
-        return userProfiles;
+    public String getLeaderId() {
+        return leaderId;
     }
 
-    public void setUserProfiles(UserProfile userProfile) {
-        this.userProfiles = userProfile;
+    public void setLeaderId(String leaderId) {
+        this.leaderId = leaderId;
     }
 
-    public String getUpBossId() {
-        return upBossId;
+    public UserProfile getUserProfile() {
+        return userProfile;
     }
 
-    public void setUpBossId(String upBossId) {
-        this.upBossId = upBossId;
+    public void setUserProfile(UserProfile userProfile) {
+        this.userProfile = userProfile;
     }
 
     @Override
@@ -124,7 +121,7 @@ public class User implements Serializable {
         final int prime = 31;
         int result = 1;
         result = prime * result + ((id == null) ? 0 : id.hashCode());
-        result = prime * result + ((ssoId == null) ? 0 : ssoId.hashCode());
+        result = prime * result + ((jobId == null) ? 0 : jobId.hashCode());
         return result;
     }
 
@@ -142,22 +139,21 @@ public class User implements Serializable {
                 return false;
         } else if (!id.equals(other.id))
             return false;
-        if (ssoId == null) {
-            if (other.ssoId != null)
+        if (jobId == null) {
+            if (other.jobId != null)
                 return false;
-        } else if (!ssoId.equals(other.ssoId))
+        } else if (!jobId.equals(other.jobId))
             return false;
         return true;
     }
 
-    /*
-     * DO-NOT-INCLUDE passwords in toString function.
-     * It is done here just for convenience purpose.
-     */
     @Override
     public String toString() {
-        return "User [id=" + id + ", ssoId=" + ssoId + ", password=" + password
+        return "User [id=" + id
+                + ", jobId=" + jobId
                 + ", name=" + name
-                + ", phone=" + phone + "]";
+                + ", phone=" + phone
+                + ", leaderId=" + leaderId
+                + "]";
     }
 }

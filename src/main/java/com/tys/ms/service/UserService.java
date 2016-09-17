@@ -3,28 +3,26 @@ package com.tys.ms.service;
 import com.tys.ms.model.User;
 import java.util.List;
 
-
-
 public interface UserService {
 	
 	User findById(int id);
 	
-	User findBySSO(String sso);
+	User findByJobId(String jobId);
 	
 	void saveUser(User user);
 	
 	void updateUser(User user);
 
-	void changePasswd(User user);
+	void changePwd(User user);
 	
-	void deleteUserBySSO(String sso);
+	void deleteUserByJobId(String jobId);
 
 	List<User> findAllUsers();
 
-    List<User> findDownUsers(String upBossId);
+    List<User> findDownUsers(String leaderId);
 
-	List<User> findTwiceDownUsers(String upBossId);
+	List<User> findAllDownUsers(String leaderId);
 	
-	boolean isUserSSOUnique(Integer id, String sso);
+	boolean isUserJobIdUnique(Integer id, String jobId);
 
 }

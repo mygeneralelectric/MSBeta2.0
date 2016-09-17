@@ -23,8 +23,8 @@ public class UserServiceImpl implements UserService{
 		return dao.findById(id);
 	}
 
-	public User findBySSO(String sso) {
-		User user = dao.findBySSO(sso);
+	public User findByJobId(String jobId) {
+		User user = dao.findByJobID(jobId);
 		return user;
 	}
 
@@ -33,47 +33,42 @@ public class UserServiceImpl implements UserService{
 		dao.save(user);
 	}
 
-	/*
-	 * Since the method is running with Transaction, No need to call hibernate update explicitly.
-	 * Just fetch the entity from db and update it with proper values within transaction.
-	 * It will be updated in db once transaction ends. 
-	 */
 	public void updateUser(User user) {
 		User entity = dao.findById(user.getId());
 		if(entity!=null){
-			entity.setSsoId(user.getSsoId());
+			entity.setJobId(user.getJobId());
 			if(!user.getPassword().equals(entity.getPassword())){
 				entity.setPassword(passwordEncoder.encode(user.getPassword()));
 			}
 			entity.setName(user.getName());
 			entity.setPhone(user.getPhone());
-			entity.setUserProfiles(user.getUserProfiles());
+			entity.setUserProfile(user.getUserProfile());
 		}
 	}
 
-	public void changePasswd(User user) {
+	public void changePwd(User user) {
         updateUser(user);
     }
 
 	
-	public void deleteUserBySSO(String sso) {
-		dao.deleteBySSO(sso);
+	public void deleteUserByJobId(String jobId) {
+		dao.deleteByJobId(jobId);
 	}
 
 	public List<User> findAllUsers() {
 		return dao.findAllUsers();
 	}
 
-	public List<User> findDownUsers(String upBossId) {
-		return dao.findDownUsers(upBossId);
+	public List<User> findDownUsers(String leaderId) {
+		return dao.findDownUsers(leaderId);
 	}
 
-	public List<User> findTwiceDownUsers(String upBossId) {
-		return dao.findTwiceDownUsers(upBossId);
+	public List<User> findAllDownUsers(String leaderId) {
+		return dao.findAllDownUsers(leaderId);
 	}
 
-	public boolean isUserSSOUnique(Integer id, String sso) {
-		User user = findBySSO(sso);
+	public boolean isUserJobIdUnique(Integer id, String jobId) {
+		User user = findByJobId(jobId);
 		return ( user == null || ((id != null) && (user.getId() == id)));
 	}
 }

@@ -43,7 +43,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/", "/all-list").access("hasRole('ADMIN')")
                 .antMatchers("/newuser/**", "/delete-user-*", "/edit-user-*").access("hasRole('GROUP') or hasRole('AREA') or hasRole('ADMIN')")
                 .and().formLogin().loginPage("/login")
-                .loginProcessingUrl("/login").usernameParameter("ssoId").passwordParameter("password")
+                .loginProcessingUrl("/login").usernameParameter("jobId").passwordParameter("password")
                 .defaultSuccessUrl("/info", false)
                 .and().logout()
                 .logoutUrl("/logout")

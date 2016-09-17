@@ -1,13 +1,11 @@
 package com.tys.ms.security;
 
-
 import com.tys.ms.service.UserProfileServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.tys.ms.model.User;
-import com.tys.ms.model.UserProfile;
 import com.tys.ms.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,26 +28,22 @@ public class CustomUserDetailsService implements UserDetailsService {
 
     @Transactional(readOnly = true)
     @Override
-    public UserDetails loadUserByUsername(String ssoId) throws UsernameNotFoundException {
-        User user = userService.findBySSO(ssoId);
+    public UserDetails loadUserByUsername(String jobId) throws UsernameNotFoundException {
+        User user = userService.findByJobId(jobId);
         logger.info("User : {}", user);
         if(user==null){
             logger.info("User not found");
             throw new UsernameNotFoundException("Username not found");
         }
-        return new org.springframework.security.core.userdetails.User(user.getSsoId(), user.getPassword(),
+        return new org.springframework.security.core.userdetails.User(user.getJobId(), user.getPassword(),
                 true, true, true, true, getGrantedAuthorities(user));
     }
 
-    private List<GrantedAuthority> getGrantedAuthorities(User user){
+    private List<GrantedAuthority> getGrantedAuthorities(User user) {
         List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
 
-        logger.info("UserProfile : {}", user.getUserProfiles());
-        authorities.add(new SimpleGrantedAuthority("ROLE_"+user.getUserProfiles().getType()));
-//        for(UserProfile userProfile : user.getUserProfiles() ){
-//            logger.info("UserProfile : {}", userProfile);
-//            authorities.add(new SimpleGrantedAuthority("ROLE_"+userProfile.getType()));
-//        }
+        logger.info("UserProfile : {}", user.getUserProfile());
+        authorities.add(new SimpleGrantedAuthority("ROLE_"+user.getUserProfile().getType() ) );
         logger.info("authorities : {}", authorities);
         return authorities;
     }

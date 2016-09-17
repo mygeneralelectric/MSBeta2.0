@@ -22,84 +22,85 @@
 
                     <h2 class="header">新增会员</h2>
                     <form:form method="POST" modelAttribute="user">
+
                         <form:input type="hidden" path="id" id="id"/>
 
                         <div class="row">
                             <div class="input-field col s12 m6">
-                                <form:input placeholder="请输入内容" type="text" path="ssoId" id="ssoId" class="validate" />
-                                <label for="ssoId">ssoId</label>
+                                <form:input placeholder="请输入工号" type="text" path="jobId" id="jobId" class="validate" />
+                                <label for="jobId">工号</label>
                             </div>
                             <div class="col s12 m6">
-                                <form:errors path="ssoId" class="help-inline"/>
+                                <form:errors path="jobId" class="input-field red"/>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="input-field col s12 m6">
-                                <form:input placeholder="请输入内容" type="password" path="password" id="password" class="validate" />
-                                <label for="password">password</label>
+                                <form:input placeholder="请输入密码" type="password" path="password" id="password" class="validate" />
+                                <label for="password">密码</label>
                             </div>
                             <div class="col s12 m6">
-                                <form:errors path="password" class="help-inline"/>
+                                <form:errors path="password" class="input-field red"/>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="input-field col s12 m6">
-                                <form:input placeholder="请输入内容" type="password" path="retypePassword" id="retypePassword" class="validate" />
-                                <label for="retypePassword">retypePassword</label>
+                                <form:input placeholder="请再次输入密码" type="password" path="retypePassword" id="retypePassword" class="validate" />
+                                <label for="retypePassword">确认密码</label>
                             </div>
                             <div class="col s12 m6">
-                                <form:errors path="retypePassword" class="help-inline"/>
+                                <form:errors path="retypePassword" class="input-field red"/>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="input-field col s12 m6">
-                                <form:input placeholder="请输入内容" type="text" path="name" id="name" class="validate"/>
-                                <label for="name">Name</label>
+                                <form:input placeholder="请输入姓名" type="text" path="name" id="name" class="validate"/>
+                                <label for="name">姓名</label>
                             </div>
                             <div class="col s12 m6">
-                                <form:errors path="name" class="help-inline"/>
+                                <form:errors path="name" class="input-field red"/>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="input-field col s12 m6">
-                                <form:input placeholder="请输入内容" type="text" path="phone" id="phone" class="validate" />
-                                <label for="phone">phone</label>
+                                <form:input placeholder="请输入手机号码" type="text" path="phone" id="phone" class="validate" />
+                                <label for="phone">手机号码</label>
                             </div>
                             <div class="col s12 m6">
-                                <form:errors path="phone" class="help-inline"/>
+                                <form:errors path="phone" class="input-field red"/>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="input-field col s12 m6">
-                                <form:input placeholder="请输入内容" type="text"  path="upBossId" id="upBossId" class="validate" />
-                                <label for="upBossId">upBossId</label>
+                                <form:input placeholder="请输入上级领导工号" type="text"  path="leaderId" id="leaderId" class="validate" />
+                                <label for="leaderId">上级领导工号</label>
                             </div>
                             <div class="col s12 m6">
-                                <form:errors path="upBossId" class="help-inline"/>
+                                <form:errors path="leaderId" class="input-field red"/>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col s12 m6">
-                                <label>profile</label>
+                                <label>类型</label>
                                 <form:select path="userProfiles" items="${profile}" multiple="false" itemValue="id" itemLabel="type" class="browser-default" />
                             </div>
 
                             <div class="col s12 m6">
-                                <form:errors path="userProfiles" class="help-inline"/>
+                                <form:errors path="userProfiles" class="input-field red"/>
                             </div>
                         </div>
 
                         <br>
                         <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-                            <i class="material-icons right">send</i>
+                            <i class="material-icons right">确定新增会员</i>
                         </button>
-                        or <a href="<c:url value='/list' />">Cancel</a>
+                        <a style="padding-left: 50px;" href="<c:url value='/list' />">取消</a>
                     </form:form>
 
             </div>

@@ -3,8 +3,6 @@ package com.tys.ms.dao;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-import java.util.StringTokenizer;
-
 import com.tys.ms.model.User;
 import org.hibernate.Criteria;
 import org.hibernate.Hibernate;
@@ -20,18 +18,21 @@ public class UserDaoImpl extends AbstractDao<Integer, User> implements UserDao {
     public User findById(int id) {
         User user = getByKey(id);
         if(user!=null){
-            Hibernate.initialize(user.getUserProfiles());
+            Hibernate.initialize(user.getUserProfile());
         }
         return user;
     }
 
-    public User findBySSO(String sso) {
-        logger.info("SSO : {}", sso);
-        Criteria crit = createEntityCriteria();
-        crit.add(Restrictions.eq("ssoId", sso));
-        User user = (User)crit.uniqueResult();
+    public User findByJobID(String jobId) {
+        logger.info("JobID : {}", jobId);
+        Criteria criteria = createEntityCriteria();
+        criteria.add(Restrictions.eq("jobId", jobId));
+        User user = (User) criteria.uniqueResult();
         if(user!=null){
-            Hibernate.initialize(user.getUserProfiles());
+            Hibernate.initialize(user.getUserProfile());
+            System.out.println(user.getUserProfile());
+        } else {
+            System.out.println("wrong");
         }
         return user;
     }
@@ -39,58 +40,52 @@ public class UserDaoImpl extends AbstractDao<Integer, User> implements UserDao {
     @SuppressWarnings("unchecked")
     public List<User> findAllUsers() {
         Criteria criteria = createEntityCriteria().addOrder(Order.asc("name"));
-        criteria.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY);//To avoid duplicates.
+        criteria.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY); //  避免重复
         List<User> users = (List<User>) criteria.list();
 
-        // No need to fetch userProfiles since we are not showing them on list page. Let them lazy load.
-        // Uncomment below lines for eagerly fetching of userProfiles if you want.
-		/*
-		for(User user : users){
-			Hibernate.initialize(user.getUserProfiles());
-		}*/
+//		for (User user : users) {
+//			Hibernate.initialize(user.getUserProfile());
+//		}
+
         return users;
     }
 
-    public List<User> findTwiceDownUsers(String upBossId) {
-        List<User> targetUsers = null;
-        List<User> users1 = findDownUsers(upBossId);
-        targetUsers = users1;
-        List<User> users2 = null;
-        for (User user1 : users1) {
-            users2 = findDownUsers(user1.getSsoId());
-        }
-        for (User user2 : users2) {
-            targetUsers.add(user2);
-            System.out.println(user2.getSsoId());
-            System.out.println(targetUsers.size());
-        }
-        return targetUsers;
-    }
-
-    public List<User> findDownUsers(String upBossId) {
-        logger.info("upBossId : {}", upBossId);
-        Criteria crit = createEntityCriteria();
-        List<User> users  = crit.add(Restrictions.eq("upBossId", upBossId))
+    public List<User> findDownUsers(String leaderId) {
+        logger.info("leaderId : {}", leaderId);
+        Criteria criteria = createEntityCriteria();
+        List<User> users  = criteria.add(Restrictions.eq("leaderId", leaderId))
                 .setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY)
                 .list();
 
-        // No need to fetch userProfiles since we are not showing them on list page. Let them lazy load.
-        // Uncomment below lines for eagerly fetching of userProfiles if you want.
-		/*
-		for(User user : users){
-			Hibernate.initialize(user.getUserProfiles());
-		}*/
+//		for (User user : users) {
+//			Hibernate.initialize(user.getUserProfile());
+//		}
+
         return users;
+    }
+
+    public List<User> findAllDownUsers(String leaderId) {
+        List<User> targetUsers = null;
+        List<User> users1 = findDownUsers(leaderId);
+        targetUsers = users1;
+        List<User> users2 = null;
+        for (User user1 : users1) {
+            users2 = findDownUsers(user1.getJobId());
+        }
+        for (User user2 : users2) {
+            targetUsers.add(user2);
+        }
+        return targetUsers;
     }
 
     public void save(User user) {
         persist(user);
     }
 
-    public void deleteBySSO(String sso) {
-        Criteria crit = createEntityCriteria();
-        crit.add(Restrictions.eq("ssoId", sso));
-        User user = (User)crit.uniqueResult();
+    public void deleteByJobId(String jobId) {
+        Criteria criteria = createEntityCriteria();
+        criteria.add(Restrictions.eq("jobId", jobId));
+        User user = (User)criteria.uniqueResult();
         delete(user);
     }
 }

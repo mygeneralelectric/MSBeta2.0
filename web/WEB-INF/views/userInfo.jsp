@@ -22,9 +22,9 @@
                 <c:if test="${not empty users}">
                     <p>name : ${users.name}</p>
                     <p>phone : ${users.phone}</p>
-                    <p>ssoId : ${users.ssoId}</p>
+                    <p>jobId : ${users.jobId}</p>
                 </c:if>
-                <a  href="<c:url value='/change-passwd-${users.ssoId}' />" class="waves-effect waves-light btn"><i class="material-icons left">edit</i>修改密码</a>
+                <a  href="<c:url value='/change-passwd-${users.jobId}' />" class="waves-effect waves-light btn"><i class="material-icons left">edit</i>修改密码</a>
             </div>
         </div>
     </main>
