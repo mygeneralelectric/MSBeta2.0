@@ -30,7 +30,7 @@
                         <div class="row" style="padding: 20px;">
 
                             <div class="input-field col s12">
-                                <input type="text" id="name" placeholder="请输入工号" path="ssoId" name="ssoId"  class="validate" required="required" />
+                                <input type="text" id="name" placeholder="请输入工号" path="ssoId" name="ssoId"  class="validate" required="required" autocomplete='off'  />
                                 <label for="name">用户名</label>
                             </div>
 
