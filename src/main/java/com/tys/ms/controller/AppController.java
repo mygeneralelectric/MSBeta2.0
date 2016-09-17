@@ -3,6 +3,7 @@ package com.tys.ms.controller;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import com.tys.ms.model.UserProfile;
@@ -22,6 +23,7 @@ import org.springframework.security.web.authentication.rememberme.PersistentToke
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
+import sun.security.util.Password;
 
 @Controller
 @RequestMapping("/")
@@ -173,7 +175,7 @@ public class AppController {
 
         userService.saveUser(user);
 
-        model.addAttribute("success", "User " + user.getFirstName() + " "+ user.getLastName() + " registered successfully");
+        model.addAttribute("success", "User " + user.getName() + " " + " registered successfully");
         model.addAttribute("loggedinuser", getPrincipal());
         //return "success";
         return "registrationsuccess";
@@ -218,7 +220,7 @@ public class AppController {
 
         userService.updateUser(user);
 
-        model.addAttribute("success", "User " + user.getFirstName() + " "+ user.getLastName() + " updated successfully");
+        model.addAttribute("success", "User " + user.getName()  + " updated successfully");
         model.addAttribute("loggedinuser", getPrincipal());
         return "registrationsuccess";
     }
@@ -241,30 +243,15 @@ public class AppController {
      * updating user in database. It also validates the user input
      */
     @RequestMapping(value = { "/change-passwd-{ssoId}" }, method = RequestMethod.POST)
-    public String changePasswd(@RequestParam("password") String password, ModelMap model, @PathVariable String ssoId) {
-//        if (result.hasErrors()) {
-//            model.addAttribute("edit", true);
-//            int upId = userService.findBySSO(ssoId).getUserProfiles().getId();
-//            List<UserProfile> userProfileList = userProfileService.findDownAll(upId);
-//            model.addAttribute("profile", userProfileList);
-//            return "registration";
-//        }
+    public String changePasswd(@RequestParam("password") String password,  ModelMap model, @PathVariable String ssoId) {
 
-		/*//Uncomment below 'if block' if you WANT TO ALLOW UPDATING SSO_ID in UI which is a unique key to a User.
-		if(!userService.isUserSSOUnique(user.getId(), user.getSsoId())){
-			FieldError ssoError =new FieldError("user","ssoId",messageSource.getMessage("non.unique.ssoId", new String[]{user.getSsoId()}, Locale.getDefault()));
-		    result.addError(ssoError);
-			return "registration";
-		}*/
-
-		User user = userService.findBySSO(ssoId);
-        user.setPassword(password);
-
+        User user = userService.findBySSO(ssoId);
+        user.setPassword(String.valueOf(password));
         userService.updateUser(user);
-
-        model.addAttribute("success", "User " + user.getFirstName() + " "+ user.getLastName() + " updated successfully");
+        model.addAttribute("success", "User " + user.getName()  + " updated successfully");
         model.addAttribute("loggedinuser", getPrincipal());
-        return "registrationsuccess";
+        return "cpDone";
+
     }
 
     /**
