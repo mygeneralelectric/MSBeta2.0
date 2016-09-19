@@ -40,6 +40,11 @@
                                 <label for="password">密码</label>
                             </div>
 
+                            <div class="col s12">
+                                <input type="checkbox" id="rem_me" name="remember-me"/>
+                                <label for="rem_me">记住我</label>
+                            </div>
+
                             <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
 
                             <div class="col s12">
