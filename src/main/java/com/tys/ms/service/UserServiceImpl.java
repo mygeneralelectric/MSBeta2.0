@@ -59,7 +59,13 @@ public class UserServiceImpl implements UserService{
 		return dao.findAllUsers();
 	}
 
-	public List<User> findDownUsers(String leaderId) {
+    @Override
+    public List<User> findByType(String type) {
+        // TODO
+        return null;
+    }
+
+    public List<User> findDownUsers(String leaderId) {
 		return dao.findDownUsers(leaderId);
 	}
 

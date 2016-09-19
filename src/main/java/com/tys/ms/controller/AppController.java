@@ -91,19 +91,26 @@ public class AppController {
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public String listUsers(ModelMap model) {
-        List<User> users = userService.findAllDownUsers(getPrincipal());
+        List<User> users = null;
+        User loginUser = userService.findByJobId(getPrincipal());
+        if (loginUser.getUserProfile().getType().equals("ADMIN")) {
+            users = userService.findAllUsers();
+        } else {
+            users = userService.findAllDownUsers(getPrincipal());
+        }
+//        List<User> users = userService.findAllDownUsers(getPrincipal());
         model.addAttribute("users", users);
         model.addAttribute("loginUser", getPrincipal());
         return "userList";
     }
 
-    @RequestMapping(value = { "/", "/all-list" }, method = RequestMethod.GET)
-    public String listAllUsers(ModelMap model) {
-        List<User> users = userService.findAllUsers();
-        model.addAttribute("users", users);
-        model.addAttribute("loginUser", getPrincipal());
-        return "userList";
-    }
+//    @RequestMapping(value = { "/", "/all-list" }, method = RequestMethod.GET)
+//    public String listAllUsers(ModelMap model) {
+//        List<User> users = userService.findAllUsers();
+//        model.addAttribute("users", users);
+//        model.addAttribute("loginUser", getPrincipal());
+//        return "userList";
+//    }
 
     @RequestMapping(value = "/addUser", method = RequestMethod.GET)
     public String newUser(ModelMap model) {
@@ -151,7 +158,7 @@ public class AppController {
         return "registrationDone";
     }
 
-    @RequestMapping(value = { "/edit-user-{jobId}" }, method = RequestMethod.GET)
+    @RequestMapping(value = "/edit-user-{jobId}", method = RequestMethod.GET)
     public String editUser(@PathVariable String jobId, ModelMap model) {
         User user = userService.findByJobId(jobId);
         model.addAttribute("user", user);
@@ -180,12 +187,14 @@ public class AppController {
         return "registrationDone";
     }
 
-    @RequestMapping(value = { "/change-pwd-{jobId}" }, method = RequestMethod.GET)
+    @RequestMapping(value = "/change-pwd-{jobId}", method = RequestMethod.GET)
     public String changePwd(ModelMap model, @PathVariable String jobId) {
+        User user = userService.findByJobId(jobId);
+        model.addAttribute("user", user);
         return "cp";
     }
 
-    @RequestMapping(value = { "/change-pwd-{jobId}" }, method = RequestMethod.POST)
+    @RequestMapping(value = "/change-pwd-{jobId}", method = RequestMethod.POST)
     public String changePwd(User user, BindingResult result, ModelMap model, @PathVariable String jobId) {
         User user2 = userService.findByJobId(jobId);
         if (!BCrypt.checkpw(user.getOldPassword(), user2.getPassword())) {
@@ -220,7 +229,7 @@ public class AppController {
 
     @RequestMapping(value = "/Access_Denied", method = RequestMethod.GET)
     public String accessDeniedPage(ModelMap model) {
-        model.addAttribute("loggedinuser", getPrincipal());
+        model.addAttribute("loginUser", getPrincipal());
         return "accessDenied";
     }
 }

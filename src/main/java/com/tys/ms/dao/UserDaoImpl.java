@@ -50,6 +50,11 @@ public class UserDaoImpl extends AbstractDao<Integer, User> implements UserDao {
         return users;
     }
 
+    @Override
+    public List<User> findByType(String type) {
+        return null;
+    }
+
     public List<User> findDownUsers(String leaderId) {
         logger.info("leaderId : {}", leaderId);
         Criteria criteria = createEntityCriteria();

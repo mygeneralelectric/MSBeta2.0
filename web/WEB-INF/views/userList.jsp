@@ -25,7 +25,7 @@
 
                     <sec:authorize access="hasRole('ADMIN') or hasRole('AREA') or hasRole('GROUP')">
                         <div class="col s6">
-                            <a class="btn-floating btn-large red right" href="<c:url value='/newuser' />">
+                            <a class="btn-floating btn-large red right" href="<c:url value='/addUser' />">
                                 <i class="large material-icons">add</i>
                             </a>
                         </div>
@@ -90,16 +90,6 @@
                     </div>
                 </div>
 			</div>
-
-
-
-            <%--<div class="section">--%>
-                <%--<sec:authorize access="hasRole('ADMIN') or hasRole('AREA') or hasRole('GROUP')">--%>
-                    <%--<div class="well">--%>
-                        <%--<a href="<c:url value='/newuser' />">Add New User</a>--%>
-                    <%--</div>--%>
-                <%--</sec:authorize>--%>
-            <%--</div>--%>
 
 		</div>
 	</main>

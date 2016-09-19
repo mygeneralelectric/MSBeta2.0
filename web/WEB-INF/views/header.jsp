@@ -36,10 +36,7 @@
             </div>
         </li>
         <li class="bold"><a href="<c:url value='/info' />" class="waves-effect waves-teal">会员信息</a></li>
-        <sec:authorize access="hasRole('ADMIN')">
-            <li class="bold"><a href="<c:url value='/all-list' />" class="waves-effect waves-teal">会员管理</a></li>
-        </sec:authorize>
-        <sec:authorize access="hasRole('AREA') or hasRole('GROUP')">
+        <sec:authorize access="hasRole('AREA') or hasRole('GROUP') or hasRole('ADMIN')">
             <li class="bold"><a href="<c:url value='/list' />" class="waves-effect waves-teal">会员管理</a></li>
         </sec:authorize>
 

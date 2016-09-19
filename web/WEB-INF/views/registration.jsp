@@ -88,11 +88,11 @@
                         <div class="row">
                             <div class="col s12 m6">
                                 <label>类型</label>
-                                <form:select path="userProfiles" items="${profile}" multiple="false" itemValue="id" itemLabel="type" class="browser-default" />
+                                <form:select path="userProfile" items="${profile}" multiple="false" itemValue="id" itemLabel="type" class="browser-default" />
                             </div>
 
                             <div class="col s12 m6">
-                                <form:errors path="userProfiles" class="input-field red"/>
+                                <form:errors path="userProfile" class="input-field red"/>
                             </div>
                         </div>
 

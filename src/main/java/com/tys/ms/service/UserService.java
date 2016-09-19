@@ -19,6 +19,8 @@ public interface UserService {
 
 	List<User> findAllUsers();
 
+	List<User> findByType(String type);
+
     List<User> findDownUsers(String leaderId);
 
 	List<User> findAllDownUsers(String leaderId);
