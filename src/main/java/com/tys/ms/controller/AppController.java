@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import com.tys.ms.model.UserProfile;
+
+import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 import javax.servlet.http.HttpServletRequest;
@@ -95,6 +97,19 @@ public class AppController {
         User loginUser = userService.findByJobId(getPrincipal());
         if (loginUser.getUserProfile().getType().equals("ADMIN")) {
             users = userService.findAllUsers();
+
+            Iterator<User> it = users.iterator();
+            while(it.hasNext()) {
+                if(it.next().getLeaderId().equals("NONE")) {
+                    it.remove();
+                }
+            }
+
+//            while (users.iterator().hasNext()) {
+//                if (users.iterator().next().getLeaderId().equals("NONE")) {
+//                    users.iterator().remove();
+//                }
+//            }
         } else {
             users = userService.findAllDownUsers(getPrincipal());
         }
@@ -142,7 +157,7 @@ public class AppController {
             return "registration";
         }
 
-        if(user.getPassword() != user.getRetypePassword()) {
+        if(!user.getPassword().equals(user.getRetypePassword() ) ) {
             int upId = userService.findByJobId(getPrincipal()).getUserProfile().getId();
             List<UserProfile> userProfileList = userProfileService.findDownAll(upId);
             model.addAttribute("profile", userProfileList);

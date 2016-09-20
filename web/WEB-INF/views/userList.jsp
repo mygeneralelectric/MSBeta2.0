@@ -42,7 +42,7 @@
                                 <tr>
                                     <th>Name</th>
                                     <th>Phone</th>
-                                    <th>SSO ID</th>
+                                    <th>JOB ID</th>
                                     <sec:authorize access="hasRole('ADMIN')">
                                         <th></th>
                                         <th></th>
