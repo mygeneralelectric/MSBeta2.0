@@ -1,5 +1,6 @@
 package com.tys.ms.dao;
 
+import com.tys.ms.model.UserAttempts;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -57,10 +58,9 @@ public class UserDaoImpl extends AbstractDao<Integer, User> implements UserDao {
 
     public List<User> findDownUsers(String leaderId) {
         logger.info("leaderId : {}", leaderId);
-        Criteria criteria = createEntityCriteria();
-        List<User> users  = criteria.add(Restrictions.eq("leaderId", leaderId))
-                .setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY)
-                .list();
+        Criteria criteria = createEntityCriteria().add(Restrictions.eq("leaderId", leaderId));
+        criteria.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY);
+        List<User> users  =  (List<User>) criteria.list();
 
 //		for (User user : users) {
 //			Hibernate.initialize(user.getUserProfile());
@@ -92,4 +92,5 @@ public class UserDaoImpl extends AbstractDao<Integer, User> implements UserDao {
         User user = (User)criteria.uniqueResult();
         delete(user);
     }
+
 }

@@ -1,6 +1,8 @@
 package com.tys.ms.dao;
 
 import com.tys.ms.model.User;
+import com.tys.ms.model.UserAttempts;
+
 import java.util.List;
 
 public interface UserDao {
@@ -19,5 +21,6 @@ public interface UserDao {
 	List<User> findDownUsers(String leaderId);
 
 	List<User> findAllDownUsers(String leaderId);
+
 }
 
