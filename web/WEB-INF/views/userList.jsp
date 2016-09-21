@@ -37,6 +37,7 @@
                 <br>
                 <div class="row">
                     <div class="col s12">
+                        <c:if test="${not empty users}">
                         <table class="bordered">
                             <thead>
                                 <tr>
@@ -51,7 +52,6 @@
                             </thead>
 
                             <tbody>
-                            <c:if test="${not empty users}">
                                 <c:forEach items="${users}" var="user">
                                     <tr>
                                         <td>${user.name}</td>
@@ -63,8 +63,6 @@
                                             </td>
                                             <td>
                                                 <a href="#${user.jobId}" class="waves-effect waves-light btn modal-trigger">删除</a>
-                                                    <%--<a href="<c:url value='/delete-user-${user.jobId}' />" class="waves-effect waves-light btn modal-trigger">删除</a>--%>
-
                                                 <div id="${user.jobId}" class="modal">
                                                     <div class="modal-content">
                                                         <h4>确认删除${user.jobId}？</h4>
@@ -79,14 +77,13 @@
                                         </sec:authorize>
                                     </tr>
                                 </c:forEach>
-                            </c:if>
-
-                            <c:if test="${empty users}">
-                                <p>请添加用户</p>
-                            </c:if>
                             </tbody>
-
                         </table>
+                        </c:if>
+
+                        <c:if test="${empty users}">
+                            <p>请添加用户</p>
+                        </c:if>
                     </div>
                 </div>
 			</div>

@@ -6,7 +6,6 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-    <meta http-equiv="refresh" content="5; url='/logout' " />
     <title>修改密码成功</title>
     <link rel="stylesheet" href="<c:url value='/static/css/materialize.css' />" media="screen,projection" />
     <link rel="stylesheet"  href="<c:url value='/static/css/style.css' />" media="screen,projection" />
@@ -23,7 +22,7 @@
                         <span class="card-title">修改成功</span>
                     </div>
                     <div class="card-content">
-                        <p>5秒后将自动退出登录</p>
+                        <p><span id="showTime">5</span>秒后将自动退出登录</p>
                     </div>
                     <div class="card-action">
                         <a href="<c:url value="/logout" />">确定退出</a>
@@ -37,6 +36,18 @@
     <script src="static/js/jquery-2.1.1.min.js"></script>
     <script src="static/js/materialize.js"></script>
     <script src="static/js/init.js"></script>
+    <script type="text/javascript">
+        var t = 5;
+        function showTime(){
+            t = t - 1;
+            document.getElementById('showTime').innerHTML = t;
+            if(t == 0){
+                location.href = '/logout';
+            }
+            setTimeout("showTime()", 1000);
+        }
+        showTime();
+    </script>
 
 </body>
 </html>
