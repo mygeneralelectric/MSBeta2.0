@@ -2,6 +2,7 @@ package com.tys.ms.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
+import javax.validation.constraints.AssertFalse;
 import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -43,6 +44,9 @@ public class User implements Serializable {
             joinColumns = { @JoinColumn(name = "USER_ID") },
             inverseJoinColumns = { @JoinColumn(name = "USER_PROFILE_ID") })
     private UserProfile userProfile;
+
+    @Column(name="HAS_LOCKED", nullable=false)
+    private boolean hasLocked = false;
 
     public Integer getId() {
         return id;
@@ -114,6 +118,14 @@ public class User implements Serializable {
 
     public void setUserProfile(UserProfile userProfile) {
         this.userProfile = userProfile;
+    }
+
+    public boolean isHasLocked() {
+        return hasLocked;
+    }
+
+    public void setHasLocked(boolean hasLocked) {
+        this.hasLocked = hasLocked;
     }
 
     @Override
