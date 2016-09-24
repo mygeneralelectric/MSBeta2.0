@@ -63,14 +63,15 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and().exceptionHandling().accessDeniedPage("/Access_Denied")
                 .and().sessionManagement()
                 .sessionFixation().newSession()
-                .maximumSessions(1).maxSessionsPreventsLogin(true);
+                .maximumSessions(1).maxSessionsPreventsLogin(true)
+                .sessionRegistry(sessionRegistry());
     }
 
-//    @Bean
-//    public SessionRegistry sessionRegistry() {
-//        SessionRegistry sessionRegistry = new SessionRegistryImpl();
-//        return sessionRegistry;
-//    }
+    @Bean
+    public SessionRegistry sessionRegistry() {
+        SessionRegistry sessionRegistry = new SessionRegistryImpl();
+        return sessionRegistry;
+    }
 
 //    @Bean
 //    protected AuthenticationSuccessHandler authSuccessHandler() {

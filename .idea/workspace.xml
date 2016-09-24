@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6cc4fa85-0f50-47e8-b37d-33ebd631ef6c" name="Default" comment="2016-09-24 pm1">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tys/ms/security/AppLogoutSuccessHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/security/CustomUserDetailsService.class" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/security/CustomUserDetailsService.class" />
+    <list default="true" id="6cc4fa85-0f50-47e8-b37d-33ebd631ef6c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/security/SecurityConfiguration.class" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/security/SecurityConfiguration.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/security/SecurityWebApplicationInitializer.class" afterPath="$PROJECT_DIR$/out/artifacts/MSBeta1_9_war_exploded/WEB-INF/classes/com/tys/ms/security/SecurityWebApplicationInitializer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tys/ms/security/CustomUserDetailsService.class" afterPath="$PROJECT_DIR$/target/classes/com/tys/ms/security/CustomUserDetailsService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tys/ms/security/SecurityConfiguration.class" afterPath="$PROJECT_DIR$/target/classes/com/tys/ms/security/SecurityConfiguration.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tys/ms/security/SecurityWebApplicationInitializer.class" afterPath="$PROJECT_DIR$/target/classes/com/tys/ms/security/SecurityWebApplicationInitializer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tys/ms/security/SecurityConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/com/tys/ms/security/SecurityConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tys/ms/security/SecurityWebApplicationInitializer.java" afterPath="$PROJECT_DIR$/src/main/java/com/tys/ms/security/SecurityWebApplicationInitializer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tys/ms/util/QuickPasswordEncodingGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/com/tys/ms/util/QuickPasswordEncodingGenerator.java" />
     </list>
     <ignored path="MSBeta1.9.iws" />
@@ -70,15 +64,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SecurityConfiguration.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SecurityConfiguration.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tys/ms/security/SecurityConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-998">
-              <caret line="65" column="67" selection-start-line="65" selection-start-column="67" selection-end-line="65" selection-end-column="67" />
+            <state relative-caret-position="945">
+              <caret line="57" column="44" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4459#4460#0" expanded="true" />
-                <element signature="e#4509#4510#0" expanded="true" />
+                <element signature="e#4501#4502#0" expanded="true" />
+                <element signature="e#4551#4552#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -106,11 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SecurityWebApplicationInitializer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SecurityWebApplicationInitializer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tys/ms/security/SecurityWebApplicationInitializer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+            <state relative-caret-position="174">
+              <caret line="6" column="53" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -224,8 +218,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/tys/ms/security/AdditionalStrategyPostProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tys/ms/security/CleanRegistry.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tys/ms/security/AppLogoutSuccessHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tys/ms/security/SecurityConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tys/ms/security/SecurityWebApplicationInitializer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tys/ms/security/SecurityConfiguration.java" />
       </list>
     </option>
   </component>
@@ -1177,7 +1171,7 @@
       <workItem from="1474363916007" duration="744000" />
       <workItem from="1474437468135" duration="9356000" />
       <workItem from="1474523932478" duration="7011000" />
-      <workItem from="1474679026486" duration="13117000" />
+      <workItem from="1474679026486" duration="17223000" />
     </task>
     <task id="LOCAL-00001" summary="2016-08-27">
       <created>1472290484952</created>
@@ -1312,11 +1306,18 @@
       <option name="project" value="LOCAL" />
       <updated>1474536775342</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="2016-09-24 pm1">
+      <created>1474702941494</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1474702941494</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="272503000" />
+    <option name="totallyTimeSpent" value="276609000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1423,7 +1424,8 @@
     <MESSAGE value="2016-09-21 pm1" />
     <MESSAGE value="2016-09-21 pm3" />
     <MESSAGE value="2016-09-22 pm1" />
-    <option name="LAST_COMMIT_MESSAGE" value="2016-09-22 pm1" />
+    <MESSAGE value="2016-09-24 pm1" />
+    <option name="LAST_COMMIT_MESSAGE" value="2016-09-24 pm1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1917,23 +1919,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tys/ms/security/SecurityConfiguration.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tys/ms/security/SecurityWebApplicationInitializer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-998">
-          <caret line="65" column="67" selection-start-line="65" selection-start-column="67" selection-end-line="65" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4459#4460#0" expanded="true" />
-            <element signature="e#4509#4510#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="174">
+          <caret line="6" column="53" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="53" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tys/ms/security/SecurityWebApplicationInitializer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tys/ms/security/SecurityConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
-          <folding />
+        <state relative-caret-position="945">
+          <caret line="57" column="44" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4501#4502#0" expanded="true" />
+            <element signature="e#4551#4552#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
