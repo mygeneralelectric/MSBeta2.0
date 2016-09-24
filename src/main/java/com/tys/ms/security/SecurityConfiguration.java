@@ -12,11 +12,17 @@ import org.springframework.security.authentication.dao.DaoAuthenticationProvider
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.session.SessionRegistry;
+import org.springframework.security.core.session.SessionRegistryImpl;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.AuthenticationFailureHandler;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenBasedRememberMeServices;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
+import org.springframework.security.web.session.HttpSessionEventPublisher;
 
 @Configuration
 @EnableWebSecurity
@@ -27,6 +33,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Autowired
     PersistentTokenRepository tokenRepository;
+
+    private SessionRegistry sessionRegistry;
 
     @Autowired
     public void configureGlobalSecurity(AuthenticationManagerBuilder auth) throws Exception {
@@ -50,10 +58,34 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .invalidateHttpSession(true)
                 .deleteCookies("JSESSIONID")
                 .and().rememberMe().rememberMeParameter("remember-me").tokenRepository(tokenRepository)
-                .tokenValiditySeconds(86400)
+                .tokenValiditySeconds(3600)
                 .and().csrf()
-                .and().exceptionHandling().accessDeniedPage("/Access_Denied");
+                .and().exceptionHandling().accessDeniedPage("/Access_Denied")
+                .and().sessionManagement()
+                .sessionFixation().newSession()
+                .maximumSessions(1).maxSessionsPreventsLogin(true);
     }
+
+//    @Bean
+//    public SessionRegistry sessionRegistry() {
+//        SessionRegistry sessionRegistry = new SessionRegistryImpl();
+//        return sessionRegistry;
+//    }
+
+//    @Bean
+//    protected AuthenticationSuccessHandler authSuccessHandler() {
+//        return new LoginSuccesHandler();
+//    }
+//
+//    @Bean
+//    protected AuthenticationFailureHandler authFailureHandler() {
+//        return new LoginFailureHandler();
+//    }
+
+//    @Bean
+//    protected LogoutSuccessHandler appLogoutSuccessHandler() {
+//        return new AppLogoutSuccessHandler();
+//    }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
