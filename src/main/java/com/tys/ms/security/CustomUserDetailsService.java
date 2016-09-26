@@ -39,6 +39,10 @@ public class CustomUserDetailsService implements UserDetailsService {
             logger.info("User HasLocked");
             throw new UsernameNotFoundException("Username not found");
         }
+        if (!user.isHasPassed()) {
+            logger.info("User HasLocked");
+            throw new UsernameNotFoundException("Username not found");
+        }
         return new org.springframework.security.core.userdetails.User(user.getJobId(), user.getPassword(),
                 true, true, true, true, getGrantedAuthorities(user));
     }

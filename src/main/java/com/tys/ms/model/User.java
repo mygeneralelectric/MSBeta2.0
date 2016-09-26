@@ -48,6 +48,9 @@ public class User implements Serializable {
     @Column(name="HAS_LOCKED", nullable=false)
     private boolean hasLocked = false;
 
+    @Column(name="HAS_PASSED", nullable=false)
+    private boolean hasPassed = false;
+
     public Integer getId() {
         return id;
     }
@@ -126,6 +129,14 @@ public class User implements Serializable {
 
     public void setHasLocked(boolean hasLocked) {
         this.hasLocked = hasLocked;
+    }
+
+    public boolean isHasPassed() {
+        return hasPassed;
+    }
+
+    public void setHasPassed(boolean hasPassed) {
+        this.hasPassed = hasPassed;
     }
 
     @Override

@@ -47,6 +47,18 @@
 
                             <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
 
+
+
+
+                                <div id="embed-captcha"></div>
+                                <p id="wait" class="show">正在加载验证码......</p>
+                                <p id="notice" class="hide">请先拖动验证码到相应位置</p>
+
+
+
+
+                            <br><br>
+
                             <div class="col s12">
                                 <c:if test="${param.error != null}">
                                     <div class="card red">
@@ -62,7 +74,7 @@
                             </div>
 
                             <div class="col s12 center" style="padding: 15px 0 0 0;">
-                                <button type="submit" class="waves-effect waves-light btn-large center">登陆</button>
+                                <button id="embed-submit" type="submit" class="waves-effect waves-light btn-large center">登陆</button>
                             </div>
 
                         </div>
@@ -84,6 +96,46 @@
     <script src="static/js/jquery-2.1.1.min.js"></script>
     <script src="static/js/materialize.js"></script>
     <script src="static/js/init.js"></script>
+    <script src="http://static.geetest.com/static/tools/gt.js"></script>
+    <script>
+        var handlerEmbed = function (captchaObj) {
+            $("#embed-submit").click(function (e) {
+                var validate = captchaObj.getValidate();
+                if (!validate) {
+                    $("#notice")[0].className = "show";
+                    setTimeout(function () {
+                        $("#notice")[0].className = "hide";
+                    }, 2000);
+                    e.preventDefault();
+                }
+            });
+            // 将验证码加到id为captcha的元素里，同时会有三个input的值：geetest_challenge, geetest_validate, geetest_seccode
+            captchaObj.appendTo("#embed-captcha");
+            captchaObj.onReady(function () {
+                $("#embed-captcha")[0].className = "hide";
+                $("#wait")[0].className = "hide";
+            });
+            // 更多接口参考：http://www.geetest.com/install/sections/idx-client-sdk.html
+        };
+        $.ajax({
+            // 获取id，challenge，success（是否启用failback）
+            url: "pc-geetest/register?t=" + (new Date()).getTime(), // 加随机数防止缓存
+            type: "get",
+            dataType: "json",
+            success: function (data) {
+                // 使用initGeetest接口
+                // 参数1：配置参数
+                // 参数2：回调，回调的第一个参数验证码对象，之后可以使用它做appendTo之类的事件
+                initGeetest({
+                    gt: data.gt,
+                    challenge: data.challenge,
+                    product: "embed", // 产品形式，包括：float，embed，popup。注意只对PC版验证码有效
+                    offline: !data.success // 表示用户后台检测极验服务器是否宕机，一般不需要关注
+                    // 更多配置参数请参见：http://www.geetest.com/install/sections/idx-client-sdk.html#config
+                }, handlerEmbed);
+            }
+        });
+    </script>
 
 </body>
 </html>

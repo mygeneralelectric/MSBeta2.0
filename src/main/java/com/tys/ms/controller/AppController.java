@@ -141,15 +141,14 @@ public class AppController {
 
     @RequestMapping(value = "/addUser", method = RequestMethod.POST)
     public String saveUser(@Valid User user, BindingResult result, ModelMap model) {
+        int upId = userService.findByJobId(getPrincipal()).getUserProfile().getId();
         if (result.hasErrors()) {
-            int upId = userService.findByJobId(getPrincipal()).getUserProfile().getId();
             List<UserProfile> userProfileList = userProfileService.findDownAll(upId);
             model.addAttribute("profile", userProfileList);
             return "registration";
         }
 
         if(!userService.isUserJobIdUnique(user.getId(), user.getJobId())){
-            int upId = userService.findByJobId(getPrincipal()).getUserProfile().getId();
             List<UserProfile> userProfileList = userProfileService.findDownAll(upId);
             model.addAttribute("profile", userProfileList);
             FieldError jobIdError =new FieldError("user","jobId",messageSource.getMessage("non.unique.jobId", new String[]{user.getJobId()}, Locale.getDefault()));
@@ -158,7 +157,6 @@ public class AppController {
         }
 
         if(!user.getPassword().equals(user.getRetypePassword() ) ) {
-            int upId = userService.findByJobId(getPrincipal()).getUserProfile().getId();
             List<UserProfile> userProfileList = userProfileService.findDownAll(upId);
             model.addAttribute("profile", userProfileList);
             FieldError pwdError =new FieldError("user","jobId",messageSource.getMessage("valid.passwordConfDiff", new String[]{user.getJobId()}, Locale.getDefault()));
@@ -166,6 +164,9 @@ public class AppController {
             return "registration";
         }
 
+        if (upId == 1) {
+            user.setHasPassed(true);
+        }
         userService.saveUser(user);
 
         model.addAttribute("success", "User " + user.getName() + " " + " registered successfully");

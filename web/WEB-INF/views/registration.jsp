@@ -27,6 +27,8 @@
 
                         <form:input type="hidden" path="hasLocked" id="hasLocked"/>
 
+                        <form:input type="hidden" path="hasPassed" id="hasPassed"/>
+
                         <div class="row">
                             <div class="input-field col s12 m6">
                                 <form:input placeholder="请输入工号" type="text" path="jobId" id="jobId" class="validate" />
