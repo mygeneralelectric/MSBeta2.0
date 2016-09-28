@@ -13,6 +13,7 @@ import com.tys.ms.model.UserProfile;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.Writer;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
@@ -68,7 +69,9 @@ public class AppController {
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String loginPage(HttpServletRequest request, HttpServletResponse response) throws IOException{
+
+    public String loginPage(ModelMap model) {
+
         GeetestLib gtSdk = new GeetestLib(GeetestConfig.getGeetest_id(), GeetestConfig.getGeetest_key());
 
         String resStr = "{}";
@@ -79,24 +82,51 @@ public class AppController {
         //进行验证预处理
         int gtServerStatus = gtSdk.preProcess(userid);
 
-        //将服务器状态设置到session中
-        request.getSession().setAttribute(gtSdk.gtServerStatusSessionKey, gtServerStatus);
-        //将userid设置到session中
-        request.getSession().setAttribute("userid", userid);
+//        //将服务器状态设置到session中
+//        request.getSession().setAttribute(gtSdk.gtServerStatusSessionKey, gtServerStatus);
+//        //将userid设置到session中
+//        request.getSession().setAttribute("userid", userid);
 
         resStr = gtSdk.getResponseStr();
+        model.addAttribute("resStr", resStr);
 
-        PrintWriter out = response.getWriter();
-        out.println(resStr);
-        //将服务器状态设置到session中
-        request.getSession().setAttribute(gtSdk.gtServerStatusSessionKey, gtServerStatus);
-        resStr = gtSdk.getResponseStr();
         if (isCurrentAuthenticationAnonymous()) {
             return "login";
         } else {
             return "redirect:/info";
         }
     }
+
+    @RequestMapping(value = "/geetValidate", method = RequestMethod.GET)
+    @ResponseBody
+    public String geetValidate(ModelMap model) {
+        GeetestLib gtSdk = new GeetestLib(GeetestConfig.getGeetest_id(), GeetestConfig.getGeetest_key());
+
+        String resStr = "{}";
+
+        //自定义userid
+        String userid = "test";
+
+        //进行验证预处理
+        int gtServerStatus = gtSdk.preProcess(userid);
+
+//        //将服务器状态设置到session中
+//        request.getSession().setAttribute(gtSdk.gtServerStatusSessionKey, gtServerStatus);
+//        //将userid设置到session中
+//        request.getSession().setAttribute("userid", userid);
+
+        resStr = gtSdk.getResponseStr();
+        model.addAttribute("resStr", resStr);
+        return resStr;
+    }
+
+    @RequestMapping(value = "/something", method = RequestMethod.GET)
+    @ResponseBody
+    public String helloWorld()  {
+        return "Hello World";
+    }
+
+
 
     @RequestMapping(value="/logout", method = RequestMethod.GET)
     public String logoutPage (HttpServletRequest request, HttpServletResponse response){
@@ -131,7 +161,6 @@ public class AppController {
                     it.remove();
                 }
             }
-
 //            while (users.iterator().hasNext()) {
 //                if (users.iterator().next().getLeaderId().equals("NONE")) {
 //                    users.iterator().remove();

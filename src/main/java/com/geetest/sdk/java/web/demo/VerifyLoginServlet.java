@@ -2,15 +2,11 @@ package com.geetest.sdk.java.web.demo;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.rmi.server.SkeletonNotFoundException;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import com.geetest.sdk.java.GeetestLib;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -34,15 +30,15 @@ public class VerifyLoginServlet extends HttpServlet {
 		//从session中获取gt-server状态
 		int gt_server_status_code = (Integer) request.getSession().getAttribute(gtSdk.gtServerStatusSessionKey);
 		
-		//从session中获取userid
-		String userid = (String)request.getSession().getAttribute("userid");
+		//从session中获取userId
+		String userId = (String)request.getSession().getAttribute("userId");
 		
 		int gtResult = 0;
 
 		if (gt_server_status_code == 1) {
 			//gt-server正常，向gt-server进行二次验证
 				
-			gtResult = gtSdk.enhencedValidateRequest(challenge, validate, seccode, userid);
+			gtResult = gtSdk.enhencedValidateRequest(challenge, validate, seccode, userId);
 			System.out.println(gtResult);
 		} else {
 			// gt-server非正常情况下，进行failback模式验证

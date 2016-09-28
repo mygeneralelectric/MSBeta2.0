@@ -47,6 +47,8 @@
 
                             <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
 
+                            <div>${resStr}</div>
+
                             <div id="embed-captcha"></div>
                             <p id="wait" class="show">正在加载验证码......</p>
                             <p id="notice" class="hide">请先拖动验证码到相应位置</p>
@@ -64,6 +66,8 @@
                                     </div>
                                 </c:if>
                             </div>
+
+                            <a href="/geetValidate">fdgdhgdfhf</a>
 
                             <div class="col s12 center" style="padding: 15px 0 0 0;">
                                 <button id="embed-submit" type="submit" class="waves-effect waves-light btn-large center">登陆</button>
@@ -111,7 +115,8 @@
         };
         $.ajax({
             // 获取id，challenge，success（是否启用failback）
-            url: "/login?t=" + (new Date()).getTime(), // 加随机数防止缓存
+//            url: "/geetValidate?t=" + (new Date()).getTime(), // 加随机数防止缓存
+            url: "/geetValidate",
             type: "get",
             dataType: "json",
             success: function (data) {
