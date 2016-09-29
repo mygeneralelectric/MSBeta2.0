@@ -4,6 +4,8 @@ import javax.validation.Valid;
 
 import com.geetest.sdk.java.GeetestLib;
 import com.geetest.sdk.java.web.demo.GeetestConfig;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Controller;
@@ -14,9 +16,7 @@ import com.tys.ms.model.UserProfile;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.Writer;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Locale;
+import java.util.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import com.tys.ms.model.User;
@@ -99,7 +99,7 @@ public class AppController {
 
     @RequestMapping(value = "/geetValidate", method = RequestMethod.GET)
     @ResponseBody
-    public String geetValidate(ModelMap model) {
+    public String geetValidate(HttpServletRequest request, HttpServletResponse response, ModelMap model) {
         GeetestLib gtSdk = new GeetestLib(GeetestConfig.getGeetest_id(), GeetestConfig.getGeetest_key());
 
         String resStr = "{}";
@@ -110,23 +110,68 @@ public class AppController {
         //进行验证预处理
         int gtServerStatus = gtSdk.preProcess(userid);
 
-//        //将服务器状态设置到session中
-//        request.getSession().setAttribute(gtSdk.gtServerStatusSessionKey, gtServerStatus);
-//        //将userid设置到session中
-//        request.getSession().setAttribute("userid", userid);
+        //将服务器状态设置到session中
+        request.getSession().setAttribute(gtSdk.gtServerStatusSessionKey, gtServerStatus);
+        //将userid设置到session中
+        request.getSession().setAttribute("userid", userid);
 
         resStr = gtSdk.getResponseStr();
         model.addAttribute("resStr", resStr);
         return resStr;
     }
 
-    @RequestMapping(value = "/something", method = RequestMethod.GET)
+    @RequestMapping(value = "/geetValidate", method = RequestMethod.POST)
     @ResponseBody
-    public String helloWorld()  {
-        return "Hello World";
+    public String geetestValidate(HttpServletRequest request, HttpServletResponse response, ModelMap model) {
+        GeetestLib gtSdk = new GeetestLib(GeetestConfig.getGeetest_id(), GeetestConfig.getGeetest_key());
+
+        String challenge = request.getParameter(GeetestLib.fn_geetest_challenge);
+        String validate = request.getParameter(GeetestLib.fn_geetest_validate);
+        String seccode = request.getParameter(GeetestLib.fn_geetest_seccode);
+
+        //从session中获取gt-server状态
+        int gt_server_status_code = (Integer) request.getSession().getAttribute(gtSdk.gtServerStatusSessionKey);
+
+        //从session中获取userid
+        String userid = (String)request.getSession().getAttribute("userid");
+
+        int gtResult = 0;
+
+        if (gt_server_status_code == 1) {
+            //gt-server正常，向gt-server进行二次验证
+
+            gtResult = gtSdk.enhencedValidateRequest(challenge, validate, seccode, userid);
+            System.out.println(gtResult);
+        } else {
+            // gt-server非正常情况下，进行failback模式验证
+
+            System.out.println("failback:use your own server captcha validate");
+            gtResult = gtSdk.failbackValidateRequest(challenge, validate, seccode);
+            System.out.println(gtResult);
+        }
+
+//        JSONObject data = new JSONObject();
+        Map<String, String> data = new HashMap<String, String>();
+
+
+        if (gtResult == 1) {
+            // 验证成功
+//			PrintWriter out = response.getWriter();
+
+            data.put("status", "success");
+            data.put("version", gtSdk.getVersionInfo());
+//			out.println(data.toString());
+        }
+        else {
+            // 验证失败
+
+            data.put("status", "fail");
+            data.put("version", gtSdk.getVersionInfo());
+//			PrintWriter out = response.getWriter();
+//			out.println(data.toString());
+        }
+        return data.toString();
     }
-
-
 
     @RequestMapping(value="/logout", method = RequestMethod.GET)
     public String logoutPage (HttpServletRequest request, HttpServletResponse response){

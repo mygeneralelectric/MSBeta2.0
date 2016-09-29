@@ -10,6 +10,46 @@
     <link rel="stylesheet" href="<c:url value='/static/css/material-icons.css' />" media="screen,projection" />
     <link rel="stylesheet" href="<c:url value='/static/css/materialize.css' />" media="screen,projection" />
     <link rel="stylesheet"  href="<c:url value='/static/css/style.css' />" media="screen,projection" />
+    <style>
+        #embed-captcha {
+            width: 300px;
+            margin: 0 auto;
+        }
+        .show {
+            display: block;
+        }
+        .hide {
+            display: none;
+        }
+        #notice {
+            color: red;
+        }
+        /* 以下遮罩层为demo.用户可自行设计实现 */
+        #mask {
+            display: none;
+            position: fixed;
+            text-align: center;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            overflow: auto;
+        }
+        /* 可自行设计实现captcha的位置大小 */
+        .popup-mobile {
+            position: relative;
+        }
+        #popup-captcha-mobile {
+            position: fixed;
+            display: none;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            z-index: 9999;
+        }
+    </style>
 </head>
 <body style="background: #e9e9e9;">
     <main>
@@ -47,11 +87,19 @@
 
                             <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
 
-                            <div>${resStr}</div>
+                            <div class="col s12">
+                                <div class="popup">
+                                    <div id="embed-captcha"></div>
+                                    <p id="wait" class="show">正在加载验证码......</p>
+                                    <div id="notice" class="hide">
+                                        <div class="card red">
+                                            <p class="center white-text">请先拖动验证码到相应位置</p>
+                                        </div></div>
+                                </div>
+                            </div>
 
-                            <div id="embed-captcha"></div>
-                            <p id="wait" class="show">正在加载验证码......</p>
-                            <p id="notice" class="hide">请先拖动验证码到相应位置</p>
+
+
 
                             <div class="col s12">
                                 <c:if test="${param.error != null}">
@@ -67,8 +115,6 @@
                                 </c:if>
                             </div>
 
-                            <a href="/geetValidate">fdgdhgdfhf</a>
-
                             <div class="col s12 center" style="padding: 15px 0 0 0;">
                                 <button id="embed-submit" type="submit" class="waves-effect waves-light btn-large center">登陆</button>
                             </div>
@@ -77,6 +123,33 @@
                     </form>
                 </div>
             </div>
+
+            <%--<div class="section">--%>
+                <%--<div class="exp-demo">--%>
+                    <%--<form class="exp-embed-form">--%>
+                        <%--<div class="box">--%>
+                            <%--<div class="box-label">用户名</div>--%>
+                            <%--<input disabled="disabled" placeholder="geetest" />--%>
+                        <%--</div>--%>
+                        <%--<div class="box">--%>
+                            <%--<div class="box-label">密码</div>--%>
+                            <%--<input disabled="disabled" placeholder="******" />--%>
+                        <%--</div>--%>
+                        <%--<div class="box">--%>
+                            <%--<div class="box-label">滑动完成验证</div>--%>
+                            <%--<span id="wait" class="show">正在加载验证码......</span>--%>
+                            <%--<div class="box-captcha" id="float-captcha"></div>--%>
+                        <%--</div>--%>
+                    <%--</form>--%>
+                    <%--<div id="taste">--%>
+                        <%--<div class="fields">--%>
+                            <%--<div id="login" class="btn t-center active clickbtn font-15">--%>
+                                <%--<a href="/mobile-pc">点击体验移动端验证</a>--%>
+                            <%--</div>--%>
+                        <%--</div>--%>
+                    <%--</div>--%>
+                <%--</div>--%>
+            <%--</div>--%>
 
         </div>
     </main>
@@ -108,7 +181,7 @@
             // 将验证码加到id为captcha的元素里，同时会有三个input的值：geetest_challenge, geetest_validate, geetest_seccode
             captchaObj.appendTo("#embed-captcha");
             captchaObj.onReady(function () {
-                $("#embed-captcha")[0].className = "hide";
+                $("#embed-captcha")[0].className = "show";
                 $("#wait")[0].className = "hide";
             });
             // 更多接口参考：http://www.geetest.com/install/sections/idx-client-sdk.html

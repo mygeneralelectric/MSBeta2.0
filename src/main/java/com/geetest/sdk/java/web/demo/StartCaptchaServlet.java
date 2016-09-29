@@ -2,10 +2,12 @@ package com.geetest.sdk.java.web.demo;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import com.geetest.sdk.java.GeetestLib;
 
 
@@ -24,21 +26,21 @@ public class StartCaptchaServlet extends HttpServlet {
 
 		String resStr = "{}";
 		
-		//自定义userId
-		String userId = "tys";
+		//自定义userid
+		String userid = "test";
 
 		//进行验证预处理
-		int gtServerStatus = gtSdk.preProcess(userId);
+		int gtServerStatus = gtSdk.preProcess(userid);
 		
 		//将服务器状态设置到session中
 		request.getSession().setAttribute(gtSdk.gtServerStatusSessionKey, gtServerStatus);
-		//将userId设置到session中
-		request.getSession().setAttribute("userId", userId);
+		//将userid设置到session中
+		request.getSession().setAttribute("userid", userid);
 		
 		resStr = gtSdk.getResponseStr();
 
 		PrintWriter out = response.getWriter();
-		out.println(resStr);
+//		out.println(resStr);
 
 	}
 }
