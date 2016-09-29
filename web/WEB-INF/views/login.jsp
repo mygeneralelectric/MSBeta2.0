@@ -81,16 +81,22 @@
                             </div>
 
                             <div class="col s12">
-                                <input type="checkbox" id="rem_me" name="remember-me"/>
-                                <label for="rem_me">记住我</label>
+                                <%--<input type="checkbox" id="rem_me" name="remember-me"/>--%>
+                                <%--<label for="rem_me">记住我</label>--%>
+                                    <%--<p><i class="material-icons">touch_app</i>滑动完成验证</p>--%>
+                                    <p>
+                                        <input class="with-gap" name="group3" type="radio" id="test5" checked />
+                                        <label for="test5">滑动完成验证</label>
+                                    </p>
                             </div>
 
                             <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
 
                             <div class="col s12">
                                 <div class="popup">
-                                    <div id="embed-captcha"></div>
                                     <p id="wait" class="show">正在加载验证码......</p>
+                                    <div id="embed-captcha" style="padding-top: 20px;"></div>
+
                                     <div id="notice" class="hide">
                                         <div class="card red">
                                             <p class="center white-text">请先拖动验证码到相应位置</p>
