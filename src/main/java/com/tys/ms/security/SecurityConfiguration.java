@@ -51,7 +51,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/addUser/**", "/delete-user-*", "/edit-user-*").access("hasRole('GROUP') or hasRole('AREA') or hasRole('ADMIN')")
                 .and().formLogin().loginPage("/login")
                 .loginProcessingUrl("/login").usernameParameter("jobId").passwordParameter("password")
-                .defaultSuccessUrl("/info", false)
+                .successHandler(authSuccessHandler())
+                .failureHandler(authFailureHandler())
+//                .defaultSuccessUrl("/info", false)
                 .and().logout()
                 .logoutUrl("/logout")
                 .logoutSuccessUrl("/login?logout")
@@ -73,15 +75,15 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         return sessionRegistry;
     }
 
-//    @Bean
-//    protected AuthenticationSuccessHandler authSuccessHandler() {
-//        return new LoginSuccesHandler();
-//    }
-//
-//    @Bean
-//    protected AuthenticationFailureHandler authFailureHandler() {
-//        return new LoginFailureHandler();
-//    }
+    @Bean
+    protected AuthenticationSuccessHandler authSuccessHandler() {
+        return new AppAuthenticationSuccessHandler();
+    }
+
+    @Bean
+    protected AuthenticationFailureHandler authFailureHandler() {
+        return new AppAuthenticationFailureHandler();
+    }
 
 //    @Bean
 //    protected LogoutSuccessHandler appLogoutSuccessHandler() {

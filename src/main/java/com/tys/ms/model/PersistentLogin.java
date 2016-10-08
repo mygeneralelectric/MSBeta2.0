@@ -7,6 +7,9 @@ import java.util.Date;
 @Entity
 @Table(name = "PERSISTENT_LOGINS")
 public class PersistentLogin implements Serializable {
+
+    private static final long serialVersionUID = 6314420944246417887L;
+
     @Id
     private String series;
 

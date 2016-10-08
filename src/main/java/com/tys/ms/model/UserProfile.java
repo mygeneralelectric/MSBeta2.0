@@ -12,6 +12,9 @@ import javax.persistence.GenerationType;
 @Entity
 @Table(name="USER_PROFILE")
 public class UserProfile implements Serializable {
+
+    private static final long serialVersionUID = 3938801435486456667L;
+
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Integer id;
 

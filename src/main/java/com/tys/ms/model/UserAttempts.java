@@ -1,11 +1,15 @@
 package com.tys.ms.model;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 @Entity
 @Table(name = "USER_ATTEMPTS")
-public class UserAttempts {
+public class UserAttempts implements Serializable {
+
+    private static final long serialVersionUID = -8457357237561702950L;
+
     @Id
     private int id;
 

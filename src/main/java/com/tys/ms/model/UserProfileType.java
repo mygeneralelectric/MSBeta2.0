@@ -1,8 +1,7 @@
 package com.tys.ms.model;
 
-import java.io.Serializable;
 
-public enum UserProfileType implements Serializable {
+public enum UserProfileType {
     REGULAR("REGULAR"),
     GROUP("GROUP"),
     AREA("AREA"),
