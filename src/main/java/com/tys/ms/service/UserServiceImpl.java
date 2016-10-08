@@ -43,6 +43,7 @@ public class UserServiceImpl implements UserService{
 			entity.setName(user.getName());
 			entity.setPhone(user.getPhone());
 			entity.setUserProfile(user.getUserProfile());
+			entity.setHasLocked(user.isHasLocked());
 		}
 	}
 
