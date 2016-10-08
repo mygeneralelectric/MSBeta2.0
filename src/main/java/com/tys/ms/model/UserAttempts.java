@@ -11,6 +11,7 @@ public class UserAttempts implements Serializable {
     private static final long serialVersionUID = -8457357237561702950L;
 
     @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
 
     @Column(name="USERNAME", unique=true, nullable=false)
@@ -19,6 +20,7 @@ public class UserAttempts implements Serializable {
     @Column(name="ATTEMPTS", nullable=false)
     private int attempts;
 
+    @Column(name="LAST_MODIFIED", nullable=false)
     @Temporal(TemporalType.TIMESTAMP)
     private Date lastModified;
 

@@ -1,5 +1,7 @@
 package com.tys.ms.security;
 
+import com.tys.ms.dao.UserAttemptsDaoImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
@@ -10,9 +12,13 @@ import java.io.IOException;
 
 @Component
 public class AppAuthenticationSuccessHandler implements AuthenticationSuccessHandler {
+    @Autowired
+    UserAttemptsDaoImpl userAttemptsDao;
+
     @Override
     public void onAuthenticationSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException, ServletException {
         System.out.println("--------------------> good Authentication");
+        userAttemptsDao.resetFailAttempts(httpServletRequest.getParameter("jobId"));
         httpServletResponse.sendRedirect("/info");
     }
 }

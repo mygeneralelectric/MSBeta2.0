@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 @Repository("userAttemptsDao")
@@ -21,7 +22,9 @@ public class UserAttemptsDaoImpl extends AbstractDao<Integer, UserAttempts>{
             UserAttempts newUserAttempt = new UserAttempts();
             newUserAttempt.setUsername(username);
             newUserAttempt.setAttempts(1);
-            newUserAttempt.setLastModified(new Date());
+            Date date = new Date();
+            Timestamp timeStamp = new Timestamp(date.getTime());
+            newUserAttempt.setLastModified(timeStamp);
             persist(newUserAttempt);
         } else {
             int attempt = userAttempts.getAttempts();
