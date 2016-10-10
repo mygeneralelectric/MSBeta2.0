@@ -10,46 +10,7 @@
     <link rel="stylesheet" href="<c:url value='/static/css/material-icons.css' />" media="screen,projection" />
     <link rel="stylesheet" href="<c:url value='/static/css/materialize.css' />" media="screen,projection" />
     <link rel="stylesheet"  href="<c:url value='/static/css/style.css' />" media="screen,projection" />
-    <style>
-        #embed-captcha {
-            width: 300px;
-            margin: 0 auto;
-        }
-        .show {
-            display: block;
-        }
-        .hide {
-            display: none;
-        }
-        #notice {
-            color: red;
-        }
-        /* 以下遮罩层为demo.用户可自行设计实现 */
-        #mask {
-            display: none;
-            position: fixed;
-            text-align: center;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            overflow: auto;
-        }
-        /* 可自行设计实现captcha的位置大小 */
-        .popup-mobile {
-            position: relative;
-        }
-        #popup-captcha-mobile {
-            position: fixed;
-            display: none;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            -webkit-transform: translate(-50%, -50%);
-            z-index: 9999;
-        }
-    </style>
+    <link rel="stylesheet"  href="<c:url value='/static/css/loginStyle.css' />" media="screen,projection" />
 </head>
 <body style="background: #e9e9e9;">
     <main>
@@ -65,7 +26,6 @@
                 <div class="card" style="border-radius: 5px 5px 0 0;margin: 0 10px 0 10px;height: 10px;"></div>
                 <div class="card" style="border-radius: 5px;margin: 0;padding: 0;">
                     <form action="${loginUrl}" method="post" class="form-horizontal">
-
                         <br>
                         <blockquote class="flow-text">登录</blockquote>
                         <div class="row" style="padding: 20px;">
@@ -81,13 +41,8 @@
                             </div>
 
                             <div class="col s12">
-                                <%--<input type="checkbox" id="rem_me" name="remember-me"/>--%>
-                                <%--<label for="rem_me">记住我</label>--%>
-                                    <%--<p><i class="material-icons">touch_app</i>滑动完成验证</p>--%>
-                                    <p>
-                                        <input class="with-gap" name="group3" type="radio" id="test5" checked />
-                                        <label for="test5">滑动完成验证</label>
-                                    </p>
+                                <input type="checkbox" id="rem_me" name="remember-me"/>
+                                <label for="rem_me">记住我</label>
                             </div>
 
                             <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
@@ -100,62 +55,34 @@
                                     <div id="notice" class="hide">
                                         <div class="card red">
                                             <p class="center white-text">请先拖动验证码到相应位置</p>
-                                        </div></div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
 
-
-
-
                             <div class="col s12">
                                 <c:if test="${param.error != null}">
-                                    <div class="card red">
+                                    <div id="param_error" class="card red">
                                         <p class="center white-text">用户名或密码不正确</p>
                                     </div>
                                 </c:if>
 
                                 <c:if test="${param.logout != null}">
-                                    <div class="red">
+                                    <div id="param_logout" class="card red">
                                         <p class="center white-text">你已经成功退出登录</p>
                                     </div>
                                 </c:if>
                             </div>
 
-                            <div class="col s12 center" style="padding: 15px 0 0 0;">
-                                <button id="embed-submit" type="submit" class="waves-effect waves-light btn-large center">登陆</button>
+                            <div class="col s12 center" style="margin: 15px auto;">
+                                <button id="embed_submit" type="submit" class="waves-effect waves-light btn-large center">登陆</button>
                             </div>
 
                         </div>
                     </form>
                 </div>
             </div>
-
-            <%--<div class="section">--%>
-                <%--<div class="exp-demo">--%>
-                    <%--<form class="exp-embed-form">--%>
-                        <%--<div class="box">--%>
-                            <%--<div class="box-label">用户名</div>--%>
-                            <%--<input disabled="disabled" placeholder="geetest" />--%>
-                        <%--</div>--%>
-                        <%--<div class="box">--%>
-                            <%--<div class="box-label">密码</div>--%>
-                            <%--<input disabled="disabled" placeholder="******" />--%>
-                        <%--</div>--%>
-                        <%--<div class="box">--%>
-                            <%--<div class="box-label">滑动完成验证</div>--%>
-                            <%--<span id="wait" class="show">正在加载验证码......</span>--%>
-                            <%--<div class="box-captcha" id="float-captcha"></div>--%>
-                        <%--</div>--%>
-                    <%--</form>--%>
-                    <%--<div id="taste">--%>
-                        <%--<div class="fields">--%>
-                            <%--<div id="login" class="btn t-center active clickbtn font-15">--%>
-                                <%--<a href="/mobile-pc">点击体验移动端验证</a>--%>
-                            <%--</div>--%>
-                        <%--</div>--%>
-                    <%--</div>--%>
-                <%--</div>--%>
-            <%--</div>--%>
 
         </div>
     </main>
@@ -171,10 +98,10 @@
     <script src="static/js/jquery-2.1.1.min.js"></script>
     <script src="static/js/materialize.js"></script>
     <script src="static/js/init.js"></script>
-    <script src="http://static.geetest.com/static/tools/gt.js"></script>
+    <script src="static/js/gt.js"></script>
     <script>
         var handlerEmbed = function (captchaObj) {
-            $("#embed-submit").click(function (e) {
+            $("#embed_submit").click(function (e) {
                 var validate = captchaObj.getValidate();
                 if (!validate) {
                     $("#notice")[0].className = "show";
@@ -194,8 +121,7 @@
         };
         $.ajax({
             // 获取id，challenge，success（是否启用failback）
-//            url: "/geetValidate?t=" + (new Date()).getTime(), // 加随机数防止缓存
-            url: "/geetValidate",
+            url: "/geetValidate?t=" + (new Date()).getTime(), // 加随机数防止缓存
             type: "get",
             dataType: "json",
             success: function (data) {
